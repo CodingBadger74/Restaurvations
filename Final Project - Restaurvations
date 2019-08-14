@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+		<p> allo luv </p>
 		<style>
 
 		.circle {
@@ -36,7 +37,7 @@
   		width: 97%;
   		background-color: #E6E6E6;
 			position:fixed;
-			top:70px; 
+			top:70px;
 			left:20px;
 			z-index: 1;
 		}
@@ -79,7 +80,7 @@
 	var circleSeats = 4;
 
 	function reduceSeating(shape) {
-		if 
+		if
 	}
 
 	</script>
