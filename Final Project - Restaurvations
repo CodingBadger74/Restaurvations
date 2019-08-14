@@ -2,15 +2,11 @@
 <html>
 	<head>
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-<<<<<<< HEAD
 		<style>
 		body {
-			background-color: #0000ff;
+			background-color: #000000;
 		}
 		</style>
-=======
-		<!-- <p> allo luv </p> -->
->>>>>>> 40032ff2178e582b4c79bdf8b228eb6926df9a46
 		<style>
 
 		.circle {
@@ -49,6 +45,7 @@
 			font-family: Optima, sans-serif;
 			text-align: center;
 			font-size: 300%;
+			color: #FFFFFF;
 		}
 
 		#Table1 {
