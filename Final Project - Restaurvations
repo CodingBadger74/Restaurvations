@@ -8,8 +8,8 @@
 			background-color: transparent;
 			border: 2px solid #4400ff;
 			color: #000000;
-			height: 100px;
-		  width: 100px;
+			height: 10%;
+		  width: 10%; 
 			position:fixed;
 			border-radius: 50%;
 		/*	top:35px;
@@ -32,29 +32,29 @@
 		}
 
 		.square {
-  		height: 88%;
+  		height: 90%;
   		width: 97%;
   		background-color: #E6E6E6;
 			position:fixed;
-			top:70px;
-			left:20px;
+			top:8%;
+			left:1.5%;
 			z-index: 1;
 		}
 
 		.heading {
 			font-family: Optima, sans-serif;
 			text-align: center;
-			font-size: 48px;
+			font-size: 300%;
 		}
 
 		#Table1 {
-			top: 200px;
-			left: 600px;
+			top: 10%;
+			left: 10%;
 		}
 
 		#Table2 {
-			top: 200px;
-			left:800px;
+			top: 40%;
+			left:20%;
 		}
 
 		</style>
@@ -79,7 +79,7 @@
 	var circleSeats = 4;
 
 	function reduceSeating(shape) {
-		if 
+		if
 	}
 
 	</script>
