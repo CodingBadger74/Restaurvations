@@ -6,18 +6,17 @@
 		<style>
 
 		.circle {
-			background-color: transparent;
+			/*background-color: transparent;*/
 			border: 3px solid #4400ff;
 			color: #000000;
 			height: 10%;
-		  width: 10%;
+			width: 10%;
 			position:fixed;
 			border-radius: 50%;
-		/*	top:35px;
-			left:170px;  */
 			z-index: 2;
 		}
 
+/*
 		.circle:hover {
 			background-color: #4400ff;
 		}
@@ -26,11 +25,7 @@
 			background-color: #ff0066;
 			border: 3px solid #ff0066;
 		}
-
-		.circle:active:after {
-			background-color: #ff0066;
-			border: 3px solid #ff0066;
-		}
+		*/
 
 		.square {
   		height: 90%;
@@ -64,7 +59,8 @@
 	<body>
 		<h1 class="heading" onselectstart="return false"> RESTAURVATIONS </h1>
 
-		<div class="circle" title="Table 1" id="Table1" onmousedown="changeStatus(this)"></div>
+		<div class="circle" title="Table 1" id="Table1" onmouseover="fill(this)"
+		onmousedown="changeStatus(this)"></div>
 		<div class="circle" title="Table 2" id="Table2" onmousedown="changeStatus(this)"></div>
 
 		<div class="square"></div>
@@ -73,15 +69,29 @@
 
 	<script>
 
+	var originalColor = "#4400ff";
+	var newColor = "#ff0066";
+
+
 	function changeStatus(shape) {
 		shape.style.color = #FF00BF;
 	}
 
-	var circleSeats = 4;
-
-	function reduceSeating(shape) {
-		if
+	function getColor(shape) {
+  if (shape.style.color == "#4400FF") {
+		color = "#FF0066";
+	} else if (shape.style.color == "#FF0066" or shape.style.color == transparent) {
+		color = "#4400FF"
 	}
+
+  return color;
+	}
+
+	function fill(shape) {
+		shape.style.backgroundColor=getColor(shape);
+	}
+
+	// SEATING NUMBERS
 
 	</script>
 	<!-- Hello. -->
