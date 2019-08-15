@@ -48,12 +48,9 @@ body {
   .circle {
     height: 18%;
     width: 10%;
-<<<<<<< HEAD
     background-color: #D2B48C;
-=======
     background-color: transparent;/*#66ff22;*/
 		border: 3px solid #009933;
->>>>>>> c42b3b28f8527e9869bd32c4e48398918ca71fe3
     border-radius: 50%;
     position:fixed;
   /*	top:35px;
@@ -83,7 +80,7 @@ body {
   }
 
   .heading {
-    font-family: Optima, sans-serif;
+    font-family: Times, serif;
     text-align: center;
   }
 
@@ -236,8 +233,8 @@ body {
   }
 
   #Front {
-    height:15%;
-    width:5%;
+    height: 15%;
+    width: 5%;
     top: 27%;
     left: 5%;
     background-color:#FFFFFF;
@@ -248,7 +245,7 @@ body {
 
 <div class="header">
   <h1 class="heading"> <center style="letter-spacing:10px;"> ~ RESTAURVATIONS ~ </center> </h1>
-  <h2 style="color:black; margin-top: -10px;"><center style="font-size:24px;"><i>"There is no sincerer love than the love of food."</i></center></h2>
+  <h2 style="color:black; margin-top: -10px;"><center style="font-size:24px;"><i>“There is no sincerer love than the love of food.”</i></center></h2>
 
   <ul>
     <li><a href="fgphome.html" style="font-size:28px; position:relative; left:14px;">Home</a></li>
@@ -259,21 +256,16 @@ body {
 
 <div class="circle" title="Table 1" id="Table1" onmouseover="circleHover(this, 0)"
 onmouseout="circleUnhover(this, 0)" onmousedown="circleClick(this, 0)"></div>
-<<<<<<< HEAD
-<div class="circle" title="Table 2" id="Table2" ></div>
-<div class="circle" title="Table 3" id="Table3" ></div>
-<div class="circle" title="Table 4" id="Table4" ></div>
-<div class="circle" title="Table 5" id="Table5" ></div>
-<div class="circle" title="Table 6" id="Table6" ></div>
-
-<div class="rectangle" title="Booth 1" id="Booth1"></div>
-<div class="rectangle" title="Booth 2" id="Booth2"></div>
-<div class="rectangle" title="Booth 3" id="Booth3"></div>
-<div class="rectangle" title="Booth 4" id="Booth4"></div>
-<div class="rectangle" title="Booth 5" id="Booth5"></div>
-=======
 <div class="circle" title="Table 2" id="Table2" onmouseover="circleHover(this, 1)"
 onmouseout="circleUnhover(this, 1)" onmousedown="circleClick(this, 1)"></div>
+<div class="circle" title="Table 3" id="Table3" onmouseover="circleHover(this, 2)"
+onmouseout="circleUnhover(this, 2)" onmousedown="circleClick(this, 2)"></div>
+<div class="circle" title="Table 4" id="Table4" onmouseover="circleHover(this, 3)"
+onmouseout="circleUnhover(this, 3)" onmousedown="circleClick(this, 3)"></div>
+<div class="circle" title="Table 5" id="Table5" onmouseover="circleHover(this, 4)"
+onmouseout="circleUnhover(this, 4)" onmousedown="circleClick(this, 4)"></div>
+<div class="circle" title="Table 6" id="Table6" onmouseover="circleHover(this, 5)"
+onmouseout="circleUnhover(this, 5)" onmousedown="circleClick(this, 5)"></div>
 
 <div class="rectangle" title="Booth 1" id="Booth1" onmouseover="boothHover(this, 0)"
 onmouseout="boothUnhover(this, 0)" onmousedown="boothClick(this, 0)"></div>
@@ -285,7 +277,7 @@ onmouseout="boothUnhover(this, 2)" onmousedown="boothClick(this, 2)"></div>
 onmouseout="boothUnhover(this, 3)" onmousedown="boothClick(this, 3)"></div>
 <div class="rectangle" title="Booth 5" id="Booth5" onmouseover="boothHover(this, 4)"
 onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
->>>>>>> c42b3b28f8527e9869bd32c4e48398918ca71fe3
+
 
 <div class="vr" title="Kitchen Vline" id="VLine1">&nbsp;</div>
 <div class="rectangle" title="Kitchen Hline" id="HLine1"></div>
@@ -294,10 +286,10 @@ onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 <div class="rectangle" title="Bathroom Hline" id="Hline2"></div>
 <div class="rectangle" title="Bar" id="Bar"></div>
 
-<div class="circle2" title="Bar Seat 2" id="BarSeat4"></div>
-<div class="circle2" title="Bar Seat 3" id="BarSeat5"></div>
-<div class="circle2" title="Bar Seat 4" id="BarSeat6"></div>
-<div class="circle2" title="Bar Seat 5" id="BarSeat7"></div>
+<div class="circle2" title="Bar Seat 1" id="BarSeat4"></div>
+<div class="circle2" title="Bar Seat 2" id="BarSeat5"></div>
+<div class="circle2" title="Bar Seat 3" id="BarSeat6"></div>
+<div class="circle2" title="Bar Seat 4" id="BarSeat7"></div>
 
 <div class="rectangle" title="Door" id="Door"></div>
 <div class="rectangle" title="Front Desk" id="Front"></div>
@@ -307,7 +299,7 @@ onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 </body>
 
 <script>
-var tableList = [false, false];
+var tableList = [false, false, false, false, false, false];
 var barSeatList = [false, false, false, false, false];
 var boothList = [false, false, false, false, false];
 
