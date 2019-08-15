@@ -62,10 +62,10 @@
 	<body>
 		<h1 class="heading" onselectstart="return false"> ~ R E S T A U R V A T I O N S ~ </h1>
 
-		<div class="circle" title="Table 1" id="Table1" onmouseover="hover(this)"
-		onmouseout="unhover(this,)" onmousedown="changeStatus(this, 0)"> </div>
-		<div class="circle" title="Table 2" id="Table2" onmouseover="hover(this)"
-		onmouseout="unhover(this)" onmousedown="changeStatus(this, 1)"></div>
+		<div class="circle" title="Table 1" id="Table1" onmouseover="hover(this, 0)"
+		onmouseout="unhover(this, 0)" onmousedown="changeStatus(this, 0)"> </div>
+		<div class="circle" title="Table 2" id="Table2" onmouseover="hover(this, 1)"
+		onmouseout="unhover(this, 1)" onmousedown="changeStatus(this, 1)"></div>
 
 		<div class="square"></div>
 
@@ -89,14 +89,14 @@
 		}
 	}
 
-	function hover(circle) {
-		if (circle.style.borderColor == originalColor) {
+	function hover(circle, num) {
+		if (clickedList[num] == false) {
 			circle.style.backgroundColor = originalColor;
 		}
 	}
 
-	function unhover(circle) {
-		if (circle.style.borderColor == originalColor) {
+	function unhover(circle, num) {
+		if (clickedList[num] == false) {
 			circle.style.backgroundColor = "#E6E6E6";
 		}
 	}
