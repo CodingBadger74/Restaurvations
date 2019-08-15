@@ -62,9 +62,10 @@
 	<body>
 		<h1 class="heading" onselectstart="return false"> ~ R E S T A U R V A T I O N S ~ </h1>
 
-		<div class="circle" title="Table 1" id="Table1"
-		onmousedown="changeStatus(this)"> </div>
-		<div class="circle" title="Table 2" id="Table2" onmousedown="changeStatus(this)"></div>
+		<div class="circle" title="Table 1" id="Table1" onmouseover="hover(this)"
+		onmouseout="unhover(this,)" onmousedown="changeStatus(this, 0)"> </div>
+		<div class="circle" title="Table 2" id="Table2" onmouseover="hover(this)"
+		onmouseout="unhover(this)" onmousedown="changeStatus(this, 1)"></div>
 
 		<div class="square"></div>
 
@@ -74,28 +75,30 @@
 
 	var originalColor = "#4400ff";
 	var newColor = "#ff0066";
-	var clicked = false;
+	var clickedList = [false, false]
 
-	function changeStatus(circle) {
-    if (clicked == true) {
-			clicked = false;
+	function changeStatus(circle, num) {
+    if (clickedList[num] == true) {
+			clickedList[num] = false;
 			circle.style.backgroundColor = originalColor;
 			circle.style.borderColor = originalColor;
 		} else {
-			clicked = true;
+			clickedList[num] = true;
 			circle.style.backgroundColor = newColor;
 			circle.style.borderColor = newColor;
 		}
 	}
 
-	function getColor(shape) {
-  	if (shape.style == "color: blue") {
-			color = "pink";
-		} else if (shape.style == "color: pink" || shape.style == "color:transparent") {
-			color = "blue";
+	function hover(circle) {
+		if (circle.style.borderColor == originalColor) {
+			circle.style.backgroundColor = originalColor;
 		}
+	}
 
-  	return color;
+	function unhover(circle) {
+		if (circle.style.borderColor == originalColor) {
+			circle.style.backgroundColor = "#E6E6E6";
+		}
 	}
 
 	// SEATING NUMBERS
