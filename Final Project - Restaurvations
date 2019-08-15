@@ -2,60 +2,59 @@
 <html>
 	<head>
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-		<p> allo luv </p>
+		<style>
+		body {
+			background-color: #000000;
+		}
+		</style>
 		<style>
 
 		.circle {
-			background-color: transparent;
-			border: 2px solid #4400ff;
+			/*background-color: transparent;*/
+			border: 3px solid #4400ff;
 			color: #000000;
-			height: 100px;
-		  width: 100px;
+			height: 10%;
+			width: 10%;
 			position:fixed;
 			border-radius: 50%;
-		/*	top:35px;
-			left:170px;  */
 			z-index: 2;
 		}
 
 		.circle:hover {
 			background-color: #4400ff;
 		}
-
+/*
 		.circle:active {
 			background-color: #ff0066;
-			border: 2px solid #ff0066;
+			border: 3px solid #ff0066;
 		}
-
-		.circle:active:after {
-			background-color: #ff0066;
-			border: 2px solid #ff0066;
-		}
+		*/
 
 		.square {
-  		height: 88%;
+  		height: 90%;
   		width: 97%;
   		background-color: #E6E6E6;
 			position:fixed;
-			top:70px;
-			left:20px;
+			top:65px;
+			left:1.5%;
 			z-index: 1;
 		}
 
 		.heading {
 			font-family: Optima, sans-serif;
 			text-align: center;
-			font-size: 48px;
+			font-size: 300%;
+			color: #FFFFFF;
 		}
 
 		#Table1 {
-			top: 200px;
-			left: 600px;
+			top: 10%;
+			left: 10%;
 		}
 
 		#Table2 {
-			top: 200px;
-			left:800px;
+			top: 40%;
+			left:20%;
 		}
 
 		</style>
@@ -64,7 +63,8 @@
 	<body>
 		<h1 class="heading" onselectstart="return false"> RESTAURVATIONS </h1>
 
-		<div class="circle" title="Table 1" id="Table1" onmousedown="changeStatus(this)"></div>
+		<div class="circle" title="Table 1" id="Table1" onmouseover="fill(this)"
+		onmousedown="changeStatus(this)"></div>
 		<div class="circle" title="Table 2" id="Table2" onmousedown="changeStatus(this)"></div>
 
 		<div class="square"></div>
@@ -73,15 +73,36 @@
 
 	<script>
 
+	var originalColor = "#4400ff";
+	var newColor = "#ff0066";
+	var clicked = false;
+
 	function changeStatus(shape) {
-		shape.style.color = #FF00BF;
+		if (clicked = true) {
+			clicked = false;
+			shape.style.color = "red";
+
+		} else {
+			clicked = true;
+			shape.style.color = "blue";
+		}
 	}
 
-	var circleSeats = 4;
+	function getColor(shape) {
+  	if (shape.style.backgroundColor == "blue") {
+			color = "pink";
+		} else if (shape.style.backgroundColor == "pink" or shape.style.backgroundColor == transparent) {
+			color = "blue";
+		}
 
-	function reduceSeating(shape) {
-		if
+  	return color;
 	}
+
+	function fill(shape) {
+		shape.style.backgroundColor = getColor(shape);
+	}
+
+	// SEATING NUMBERS
 
 	</script>
 	<!-- Hello. -->
