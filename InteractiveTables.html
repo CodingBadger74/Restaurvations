@@ -10,7 +10,7 @@
 		<style>
 
 		.circle {
-			background-color: blue;
+		/*	background-color: blue;*/
 			border: 3px solid #4400ff;
 			color: #000000;
 			height: 10%;
@@ -34,9 +34,9 @@
   		height: 90%;
   		width: 97%;
   		background-color: #E6E6E6;
-			position:fixed;
-			top:65px;
-			left:1.5%;
+			position: fixed;
+			top: 65px;
+			left: 1.5%;
 			z-index: 1;
 		}
 
@@ -61,11 +61,11 @@
 	</head>
 
 	<body>
-		<h1 class="heading" onselectstart="return false"> RESTAURVATIONS </h1>
+		<h1 class="heading" onselectstart="return false"> ~ R E S T A U R V A T I O N S ~ </h1>
 
 		<div class="circle" title="Table 1" id="Table1" onmouseover="fill(this)"
-		onmousedown="changeStatus()"></div>
-		<div class="circle" title="Table 2" id="Table2" onmousedown="changeStatus(this)"></div>
+		onmousedown="changeStatus(this)"> </div>
+		<div class="circle" title="Table 2" id="Table2" onmousedown="changeStatus()"></div>
 
 		<div class="square"></div>
 
@@ -77,14 +77,14 @@
 	var newColor = "#ff0066";
 	var clicked = false;
 
-	function changeStatus(shape) {
-		if (clicked = true) {
+	function changeStatus(element) {
+		if (clicked == true) {
 			clicked = false;
-			document.getElementById("Table1").style = "color: red;";
+			element.style.color = "color: blue;";
 
 		} else {
 			clicked = true;
-			document.getElementById("Table1").style = "color: blue;";
+			element.style.color = "color: red;";
 		}
 	}
 
