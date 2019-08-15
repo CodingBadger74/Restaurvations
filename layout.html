@@ -48,7 +48,7 @@ body {
   .circle {
     height: 18%;
     width: 10%;
-    background-color: #66ff22;
+    background-color: #D2B48C;
     border-radius: 50%;
     position:fixed;
   /*	top:35px;
@@ -96,13 +96,33 @@ body {
 
 
   #Table1 {
-    top: 20%;
-    left:20%;
+    top: 27%;
+    left:25%;
   }
 
   #Table2 {
-    top: 30%;
-    left: 30%;
+    top: 27%;
+    left: 40%;
+  }
+
+  #Table3 {
+    top: 55%;
+    left: 3%;
+  }
+
+  #Table4 {
+    top: 55%;
+    left: 18%;
+  }
+
+  #Table5 {
+    top: 55%;
+    left:33%
+  }
+
+  #Table6 {
+    top: 55%;
+    left: 48%;
   }
 
   #Booth1{
@@ -210,11 +230,19 @@ body {
   }
 
   #Door {
-    height:2.25%;
+    height:1.5%;
     width:5.5%;
     top: 26%;
-    left: 11%;
+    left: 12%;
     background-color:#000000;
+  }
+
+  #Front {
+    height:15%;
+    width:5%;
+    top: 27%;
+    left: 5%;
+    background-color:#FFFFFF;
   }
 
   </style>
@@ -234,6 +262,10 @@ body {
 <div class="circle" title="Table 1" id="Table1" onmouseover="circleHover(this, 0)"
 onmouseout="circleUnhover(this, 0)" onmousedown="circleClick(this, 0)"></div>
 <div class="circle" title="Table 2" id="Table2" ></div>
+<div class="circle" title="Table 3" id="Table3" ></div>
+<div class="circle" title="Table 4" id="Table4" ></div>
+<div class="circle" title="Table 5" id="Table5" ></div>
+<div class="circle" title="Table 6" id="Table6" ></div>
 
 <div class="rectangle" title="Booth 1" id="Booth1"></div>
 <div class="rectangle" title="Booth 2" id="Booth2"></div>
@@ -254,6 +286,7 @@ onmouseout="circleUnhover(this, 0)" onmousedown="circleClick(this, 0)"></div>
 <div class="circle2" title="Bar Seat 5" id="BarSeat7"></div>
 
 <div class="rectangle" title="Door" id="Door"></div>
+<div class="rectangle" title="Front Desk" id="Front"></div>
 
 <div class="square"></div>
 
