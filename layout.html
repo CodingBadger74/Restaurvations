@@ -48,7 +48,8 @@ body {
   .circle {
     height: 18%;
     width: 10%;
-    background-color: #66ff22;
+    background-color: transparent;/*#66ff22;*/
+		border: 3px solid #009933;
     border-radius: 50%;
     position:fixed;
   /*	top:35px;
@@ -85,7 +86,10 @@ body {
   .rectangle {
     position:fixed;
     z-index: 2;
-
+		height: 12%;
+    width: 11.3%;
+		background-color: transparent;
+		top: 84%;
   }
 
   .vr {
@@ -106,42 +110,32 @@ body {
   }
 
   #Booth1{
-    height: 12%;
-    width: 11.3%;
-    background-color:#FF0000;
-    top:84%;
+		border: 3px solid #ff5050;
+    background-color: transparent;
     left:1.5%;
   }
 
   #Booth2{
-    height: 12%;
-    width: 11.3%;
-    background-color:#FF0000;
-    top:84%;
+		border: 3px solid #ff5050;
+    background-color: transparent;
     left:15%;
   }
 
   #Booth3{
-    height: 12%;
-    width: 11.3%;
-    background-color:#FF0000;
-    top:84%;
+		border: 3px solid #ff5050;
+    background-color: transparent;
     left:28.5%;
   }
 
   #Booth4{
-    height: 12%;
-    width: 11.3%;
-    background-color:#FF0000;
-    top:84%;
+		border: 3px solid #ff5050;
+		background-color: transparent;
     left:42%;
   }
 
   #Booth5{
-    height: 12%;
-    width: 11.3%;
-    background-color:#FF0000;
-    top:84%;
+		border: 3px solid #ff5050;
+		background-color: transparent;
     left:55.5%;
   }
 
@@ -231,13 +225,19 @@ body {
 
 <div class="circle" title="Table 1" id="Table1" onmouseover="circleHover(this, 0)"
 onmouseout="circleUnhover(this, 0)" onmousedown="circleClick(this, 0)"></div>
-<div class="circle" title="Table 2" id="Table2" ></div>
+<div class="circle" title="Table 2" id="Table2" onmouseover="circleHover(this, 1)"
+onmouseout="circleUnhover(this, 1)" onmousedown="circleClick(this, 1)"></div>
 
-<div class="rectangle" title="Booth 1" id="Booth1"></div>
-<div class="rectangle" title="Booth 2" id="Booth2"></div>
-<div class="rectangle" title="Booth 3" id="Booth3"></div>
-<div class="rectangle" title="Booth 4" id="Booth4"></div>
-<div class="rectangle" title="Booth 5" id="Booth5"></div>
+<div class="rectangle" title="Booth 1" id="Booth1" onmouseover="boothHover(this, 0)"
+onmouseout="boothUnhover(this, 0)" onmousedown="boothClick(this, 0)"></div>
+<div class="rectangle" title="Booth 2" id="Booth2" onmouseover="boothHover(this, 1)"
+onmouseout="boothUnhover(this, 1)" onmousedown="boothClick(this, 1)"></div>
+<div class="rectangle" title="Booth 3" id="Booth3" onmouseover="boothHover(this, 2)"
+onmouseout="boothUnhover(this, 2)" onmousedown="boothClick(this, 2)"></div>
+<div class="rectangle" title="Booth 4" id="Booth4" onmouseover="boothHover(this, 3)"
+onmouseout="boothUnhover(this, 3)" onmousedown="boothClick(this, 3)"></div>
+<div class="rectangle" title="Booth 5" id="Booth5" onmouseover="boothHover(this, 4)"
+onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 
 <div class="vr" title="Kitchen Vline" id="VLine1">&nbsp;</div>
 <div class="rectangle" title="Kitchen Hline" id="HLine1"></div>
@@ -262,11 +262,11 @@ var barSeatList = [false, false, false, false, false];
 var boothList = [false, false, false, false, false];
 
 var circleOriginal = "#009933";
-var circleNew = "#003300";
+var circleNew = "#006600";
 var stoolOriginal = "#0099cc";
 var stoolNew = "#000099";
-var boothOriginal = "ff5050";
-var boothNew = "cc0000";
+var boothOriginal = "#ff5050";
+var boothNew = "#cc0000";
 
 function circleHover(circle, num) {
 	if (tableList[num] == false) {
@@ -277,6 +277,42 @@ function circleHover(circle, num) {
 function circleUnhover(circle, num) {
 	if (tableList[num] == false) {
 		circle.style.backgroundColor = "#E6E6E6";
+	}
+}
+
+function circleClick(circle, num) {
+	if (tableList[num] == true) {
+		tableList[num] = false;
+		circle.style.backgroundColor = circleOriginal;
+		circle.style.borderColor = circleOriginal;
+	} else {
+		tableList[num] = true;
+		circle.style.backgroundColor = circleNew;
+		circle.style.borderColor = circleNew;
+	}
+}
+
+function boothHover(booth, num) {
+	if (boothList[num] == false) {
+		booth.style.backgroundColor = boothOriginal;
+	}
+}
+
+function boothUnhover(booth, num) {
+	if (boothList[num] == false) {
+		booth.style.backgroundColor = "#E6E6E6";
+	}
+}
+
+function boothClick(booth, num) {
+	if (boothList[num] == true) {
+		boothList[num] = false;
+		booth.style.backgroundColor = boothOriginal;
+		booth.style.borderColor = boothOriginal;
+	} else {
+		boothList[num] = true;
+		booth.style.backgroundColor = boothNew;
+		booth.style.borderColor = boothNew;
 	}
 }
 </script>
