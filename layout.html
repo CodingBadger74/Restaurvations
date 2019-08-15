@@ -231,7 +231,8 @@ body {
     <li><a></a></li>
   </ul>
 
-<div class="circle" title="Table 1" id="Table1"></div>
+<div class="circle" title="Table 1" id="Table1" onmouseover="circleHover(this, 0)"
+onmouseout="circleUnhover(this, 0)" onmousedown="circleClick(this, 0)"></div>
 <div class="circle" title="Table 2" id="Table2" ></div>
 
 <div class="rectangle" title="Booth 1" id="Booth1"></div>
@@ -263,7 +264,24 @@ var tableList = [false, false];
 var barSeatList = [false, false, false, false, false];
 var boothList = [false, false, false, false, false];
 
+var circleOriginal = "#009933";
+var circleNew = "#003300";
+var stoolOriginal = "#0099cc";
+var stoolNew = "#000099";
+var boothOriginal = "ff5050";
+var boothNew = "cc0000";
 
+function circleHover(circle, num) {
+	if (tableList[num] == false) {
+		circle.style.backgroundColor = circleOriginal;
+	}
+}
+
+function circleUnhover(circle, num) {
+	if (tableList[num] == false) {
+		circle.style.backgroundColor = "#E6E6E6";
+	}
+}
 </script>
 
 </html>
