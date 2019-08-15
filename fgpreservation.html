@@ -17,7 +17,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .icon {
   padding: 10px;
-  background: black;
+  background: navy;
   color: white;
   min-width: 50px;
   text-align: center;
@@ -35,7 +35,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Set a style for the submit button */
 .btn {
-  background-color: black;
+  background-color: navy;
   color: white;
   padding: 15px 20px;
   border: none;
@@ -47,12 +47,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .btn:hover {
   opacity: 1;
 }
+
+body{
+  background-color: floralwhite;
+}
 </style>
 </head>
 <body>
 
 <form action="/action_page.php" style="max-width:500px;margin:auto">
-  <h2>Reservation Form</h2>
+  <h2><center><font face="times-new-roman">~ Reservation Form ~</center></h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
     <input class="input-field" type="text" placeholder="First Name" name="fname">
@@ -81,5 +85,5 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <button type="submit" class="btn">Reserve!</button>
 </form>
 
-</body>
+
 </html>
