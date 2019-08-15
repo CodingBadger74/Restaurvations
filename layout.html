@@ -3,6 +3,41 @@
 	<head>
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 		<style>
+
+		li {
+			display: inline
+		}
+		li {
+			float: left
+			}
+		li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 8px;
+			text-decoration: none;
+			background-color: #333
+		}
+		li a:hover {
+			background-color: #111
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+		.active{
+			background-color: #4CAF50;
+		}
+		li{
+			border-right: 1px solid #bbb;
+		}
+		li:last-child {
+			border-right: none;
+		}
+
 		.circle {
 		  height: 18%;
 		  width: 10%;
@@ -30,7 +65,7 @@
   		width: 97%;
   		background-color: #E6E6E6;
 			position:fixed;
-			top:6%;
+			top:15%;
 			left:1.5%;
 			z-index: -1;
 		}
@@ -104,7 +139,7 @@
 		}
 
 		#VLine1{
-			top:5.95%;
+			top:15%;
 			bottom:43%;
 			left:72.9%;
 		}
@@ -139,45 +174,42 @@
 
 
 		#Bar {
-			height:51.75%;
+			height:42.75%;
 			width:8%;
 			background-color: #0000FF;
-			top: 6%;
+			top: 15%;
 			left: 64.9%;
 		}
 
-		#BarSeat1  {
-			top: 6%;
-			left: 61%;
-		}
+
 
 		#BarSeat2{
-			top: 13.5%;
+			top: 15%;
 			left: 61%;
 		}
 
 		#BarSeat3 {
-			top: 21%;
+			top: 22.25%;
 			left: 61%;
 		}
 
 		#BarSeat4 {
-			top: 28.5%;
+			top: 29.5%;
 			left: 61%;
 		}
 
 		#BarSeat5 {
-			top: 36%;
+			top: 36.75%;
 			left: 61%;
 		}
 
 		#BarSeat6 {
-			top: 43.5%;
+			top: 44%;
 			left: 61%;
 		}
 
 		#BarSeat7 {
-			top: 51%;
+			top: 51.25%;
 			left: 61%;
 
 		}
@@ -186,7 +218,15 @@
 	</head>
 
 	<body>
-		<h1 class="heading"> RESTAURVATIONS  </h1>
+<h1 class="heading"> RESTAURVATIONS  </h1>
+		<ul>
+		  <li><a href="#home">Home</a></li>
+		  <li><a href="#menu">Menu</a></li>
+		  <li><a href="layout.html">Make A Reservation</a></li>
+		  <li><a></a></li>
+		</ul>
+
+
 
 		<div class="circle" title="Table 1" id="Table1"></div>
 		<div class="circle" title="Table 2" id="Table2" ></div>
@@ -203,7 +243,6 @@
 		<div class="rectangle" title="Bathroom Hline" id="Hline2"></div>
 		<div class="rectangle" title="Bar" id="Bar"></div>
 
-		<div class="circle2" title="Bar Seat 1" id="BarSeat1"></div>
 		<div class="circle2" title="Bar Seat 2" id="BarSeat2"></div>
 		<div class="circle2" title="Bar Seat 3" id="BarSeat3"></div>
 		<div class="circle2" title="Bar Seat 4" id="BarSeat4"></div>
