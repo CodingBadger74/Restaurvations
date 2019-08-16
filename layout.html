@@ -50,7 +50,7 @@ body {
     width: 10%;
     background-color: #D2B48C;
     background-color: transparent;/*#66ff22;*/
-		border: 3px solid #009933;
+		border: 3px solid #cdb773; /*#009933;*/
     border-radius: 50%;
     position:fixed;
   /*	top:35px;
@@ -62,7 +62,7 @@ body {
     height: 6%;
     width: 3.5%;
     background-color: transparent;
-		border: 3px solid #0099cc;
+		border: 3px solid #cdb773;/*#0099cc;*/
     border-radius: 50%;
     position:fixed;
 		left: 60%;
@@ -133,31 +133,31 @@ body {
   }
 
   #Booth1{
-		border: 3px solid #ff5050;
+		border: 3px solid #cdb773; /*#ff5050;*/
     background-color: transparent;
     left:1.5%;
   }
 
   #Booth2{
-		border: 3px solid #ff5050;
+		border: 3px solid #cdb773; /*#ff5050;*/
     background-color: transparent;
     left:15%;
   }
 
   #Booth3{
-		border: 3px solid #ff5050;
+		border: 3px solid #cdb773; /*#ff5050;*/
     background-color: transparent;
     left:28.5%;
   }
 
   #Booth4{
-		border: 3px solid #ff5050;
+		border: 3px solid #cdb773; /*#ff5050;*/
 		background-color: transparent;
     left:42%;
   }
 
   #Booth5{
-		border: 3px solid #ff5050;
+		border: 3px solid #cdb773; /*#ff5050;*/
 		background-color: transparent;
     left:55.5%;
   }
@@ -200,7 +200,7 @@ body {
   #Bar {
     height:31.75%;
     width:8%;
-    background-color: #0000FF;
+    background-color: #bb9d44;
     top: 26%;
     left: 64.9%;
   }
@@ -230,11 +230,13 @@ body {
   }
 
   #Front {
-    height: 15%;
-    width: 5%;
+    height: 8%;
+    width: 3%;
     top: 27%;
     left: 5%;
     background-color:#FFFFFF;
+		padding:65px 20px;
+		font-family: blue;
   }
 
   </style>
@@ -292,8 +294,8 @@ onmouseout="stoolUnhover(this, 2)" onmousedown="stoolClick(this, 2)"></div>
 <div class="circle2" title="Bar Seat 4" id="BarSeat4" onmouseover="stoolHover(this, 3)"
 onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 
-<div class="rectangle" title="Door" id="Door"></div>
-<div class="rectangle" title="Front Desk" id="Front"></div>
+<div class="rectangle" title="Door" id="Door">Door</div>
+<div class="rectangle" title="Front Desk" id="Front">Front Desk</div>
 
 <div class="square"></div>
 
@@ -304,12 +306,12 @@ var tableList = [false, false, false, false, false, false];
 var stoolList = [false, false, false, false, false];
 var boothList = [false, false, false, false, false];
 
-var circleOriginal = "#009933";
-var circleNew = "#006600";
-var stoolOriginal = "#0099cc";
-var stoolNew = "#000099";
-var boothOriginal = "#ff5050";
-var boothNew = "#cc0000";
+var circleOriginal = "#cdb773"; //"#009933";
+var circleNew = "#bb9d44"; //"#006600";
+var stoolOriginal = "#cdb773"; //"#0099cc";
+var stoolNew = "#bb9d44"; //"#000099";
+var boothOriginal = "#cdb773"; //"#ff5050";
+var boothNew = "#bb9d44"; //"#cc0000";
 
 function circleHover(circle, num) {
 	if (tableList[num] == false) {
