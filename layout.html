@@ -61,9 +61,11 @@ body {
   .circle2 {
     height: 6%;
     width: 3.5%;
-    background-color: #0000FF;
+    background-color: transparent;
+		border: 3px solid #0099cc;
     border-radius: 50%;
     position:fixed;
+		left: 60%;
   /*	top:35px;
     left:170px;  */
     z-index: 2;
@@ -203,25 +205,20 @@ body {
     left: 64.9%;
   }
 
-  #BarSeat4 {
+  #BarSeat1 {
     top: 26.5%;
-    left: 61%;
   }
 
-  #BarSeat5 {
+  #BarSeat2 {
     top: 34.5%;
-    left: 61%;
   }
 
-  #BarSeat6 {
+  #BarSeat3 {
     top: 42.5%;
-    left: 61%;
   }
 
-  #BarSeat7 {
+  #BarSeat4 {
     top: 50.5%;
-    left: 61%;
-
   }
 
   #Door {
@@ -286,10 +283,14 @@ onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 <div class="rectangle" title="Bathroom Hline" id="Hline2"></div>
 <div class="rectangle" title="Bar" id="Bar"></div>
 
-<div class="circle2" title="Bar Seat 1" id="BarSeat4"></div>
-<div class="circle2" title="Bar Seat 2" id="BarSeat5"></div>
-<div class="circle2" title="Bar Seat 3" id="BarSeat6"></div>
-<div class="circle2" title="Bar Seat 4" id="BarSeat7"></div>
+<div class="circle2" title="Bar Seat 1" id="BarSeat1" onmouseover="stoolHover(this, 0)"
+onmouseout="stoolUnhover(this, 0)" onmousedown="stoolClick(this, 0)"></div>
+<div class="circle2" title="Bar Seat 2" id="BarSeat2" onmouseover="stoolHover(this, 1)"
+onmouseout="stoolUnhover(this, 1)" onmousedown="stoolClick(this, 1)"></div>
+<div class="circle2" title="Bar Seat 3" id="BarSeat3" onmouseover="stoolHover(this, 2)"
+onmouseout="stoolUnhover(this, 2)" onmousedown="stoolClick(this, 2)"></div>
+<div class="circle2" title="Bar Seat 4" id="BarSeat4" onmouseover="stoolHover(this, 3)"
+onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 
 <div class="rectangle" title="Door" id="Door"></div>
 <div class="rectangle" title="Front Desk" id="Front"></div>
@@ -300,7 +301,7 @@ onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 
 <script>
 var tableList = [false, false, false, false, false, false];
-var barSeatList = [false, false, false, false, false];
+var stoolList = [false, false, false, false, false];
 var boothList = [false, false, false, false, false];
 
 var circleOriginal = "#009933";
@@ -355,6 +356,30 @@ function boothClick(booth, num) {
 		boothList[num] = true;
 		booth.style.backgroundColor = boothNew;
 		booth.style.borderColor = boothNew;
+	}
+}
+
+function stoolHover(stool, num) {
+	if (stoolList[num] == false) {
+		stool.style.backgroundColor = stoolOriginal;
+	}
+}
+
+function stoolUnhover(stool, num) {
+	if (stoolList[num] == false) {
+		stool.style.backgroundColor = "#E6E6E6";
+	}
+}
+
+function stoolClick(stool, num) {
+	if (stoolList[num] == true) {
+		stoolList[num] = false;
+		stool.style.backgroundColor = stoolOriginal;
+		stool.style.borderColor = stoolOriginal;
+	} else {
+		stoolList[num] = true;
+		stool.style.backgroundColor = stoolNew;
+		stool.style.borderColor = stoolNew;
 	}
 }
 </script>

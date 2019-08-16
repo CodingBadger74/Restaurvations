@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Restaurvations</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,7 +18,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .icon {
   padding: 10px;
-  background: navy;
+  background: #cdb773;
   color: white;
   min-width: 50px;
   text-align: center;
@@ -35,7 +36,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Set a style for the submit button */
 .btn {
-  background-color: navy;
+  background-color: #cdb773;
   color: white;
   padding: 15px 20px;
   border: none;
@@ -74,7 +75,7 @@ body{
 
   <div class="input-container">
     <i class="fa fa-calendar icon"></i>
-    <input class="input-field" type="text" placeholder="Date" name="date">
+    <input class="input-field" type="text" placeholder="MM/DD/YY" name="date">
   </div>
 
   <div class="input-container">
@@ -82,6 +83,10 @@ body{
     <input class="input-field" type="text" placeholder="Time of Arrival" name="time">
     </div>
 
+    <div class="input-container">
+      <i class="fa fa-address-card-o icon"></i>
+      <input class="input-field" type="text" placeholder="Email" name="email">
+    </div>
   <button type="submit" class="btn">Reserve!</button>
 </form>
 
