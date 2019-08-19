@@ -56,39 +56,61 @@ body{
 </head>
 <body>
 
-<form action="/action_page.php" style="max-width:500px;margin:auto">
+<form style="max-width:500px;margin:auto">
   <h2><center><font face="times-new-roman">~ Reservation Form ~</center></h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="First Name" name="fname">
+    <input class="input-field" type="text" id="fname" placeholder="First Name" name="fname">
   </div>
 
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="Last Name" name="lname">
+    <input class="input-field" type="text" id="lname" placeholder="Last Name" name="lname">
   </div>
 
   <div class="input-container">
     <i class="fa fa-sort-numeric-asc icon"></i>
-    <input class="input-field" type="text" placeholder="# of Guests Attending" name="#">
+    <input class="input-field" type="text" id="numberofguests" placeholder="# of Guests Attending" name="#">
   </div>
 
   <div class="input-container">
     <i class="fa fa-calendar icon"></i>
-    <input class="input-field" type="text" placeholder="MM/DD/YY" name="date">
+    <input class="input-field" type="text" id="date" placeholder="MM/DD/YY" name="date">
   </div>
 
   <div class="input-container">
     <i class="fa fa-clock-o icon"></i>
-    <input class="input-field" type="text" placeholder="Time of Arrival" name="time">
+    <input class="input-field" type="text" id="time" placeholder="Time of Arrival" name="time">
     </div>
 
     <div class="input-container">
       <i class="fa fa-address-card-o icon"></i>
-      <input class="input-field" type="text" placeholder="Email" name="email">
+      <input class="input-field" type="text" id="email" placeholder="Email" name="email">
     </div>
-  <button type="submit" class="btn">Reserve!</button>
+  <button type="submit" onclick="formdata()" class="btn">Reserve!</button>
 </form>
 
+<script>
+
+function formdata()
+{
+console.log("test");
+var fname=document.getElementById("fname").value;
+var lname=document.getElementById("lname").value;
+var numberofguests=document.getElementById("numberofguests").value;
+var date=document.getElementById("date").value;
+var time=document.getElementById("time").value;
+var email=document.getElementById("email").value;
+document.write("<h1>Confirmation Page</h1><br>");
+document.write("Thank you for completing this form.<br><br>");
+document.write("The first name you entered is " + fname + "<br>");
+document.write("The last name you enetered is " + lname + "<br>");
+document.write("The number of guests you entered is " + numberofguests + "<br>");
+document.write("The date you entered is " + date + "<br>");
+document.write("The time you entered is " + time + "<br>");
+document.write("The email you entered is " + email + "<br>");
+document.close();
+}
+</script>
 
 </html>
