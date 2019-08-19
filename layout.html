@@ -3,6 +3,7 @@
 <head>
   <title>RESTAURVATIONS</title>
 </head>
+<link rel="stylesheet" href="stylesheet.css">
 <style>
 
 body {
@@ -308,7 +309,7 @@ body {
 
 
 
-  <button id="myBtn" disabled>Done</button>
+  <button id="myBtn" class="biggerFont" disabled>Done</button>
 
 
   <script>
@@ -406,7 +407,7 @@ function reportWindowSize() {
 }
 
 function resize() {
-	document.getElementById("Table1").height = (18/100 * window.innerWidth) + '%';
+	document.getElementById("Table1").height = 18/100 * window.innerWidth;
 }
 
 var tableList = [false, false, false, false, false, false];
