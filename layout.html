@@ -290,7 +290,7 @@ body {
   }
 
   </style>
-<body>
+<body onresize="resize()">
 	<!--<p>Window height: <span id="height"></span></p>
 	<p>Window width: <span id="width"></span></p>-->
 
@@ -365,11 +365,6 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 <div class='window' title="Window 4" id="window4"></div>
 <div class='window' title="Window 5" id="window5"></div>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 565db659266dfde29f3e766d08247b0f6e7d7c6a
 </body>
 
 <script>
@@ -380,11 +375,13 @@ const widthOutput = document.querySelector('#width');
 function reportWindowSize() {
   heightOutput.textContent = window.innerHeight;
   widthOutput.textContent = window.innerWidth;
-	console.log(heightOutput.textContent);
-	console.log(widthOutput.textContent);
+	console.log(window.innerHeight);
+	console.log(window.innerWidth);
 }
 
-//window.onresize = reportWindowSize;
+function resize() {
+	document.getElementById("Table1").height = (18/100 * window.innerWidth) + '%';
+}
 
 var tableList = [false, false, false, false, false, false];
 var stoolList = [false, false, false, false, false];
@@ -485,6 +482,10 @@ function calculateNewScale()
         "transform": "scale("+percentageOn1 +")"
     });
 }*/
+
+//window.onresize = reportWindowSize();
+
+window.onresize = resize()
 
 </script>
 
