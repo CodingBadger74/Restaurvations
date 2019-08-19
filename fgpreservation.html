@@ -87,8 +87,7 @@ body{
       <i class="fa fa-address-card-o icon"></i>
       <input class="input-field" type="text" id="email" placeholder="Email" name="email">
     </div>
-
-  <button type="submit" onclick="file:///Users/gwc/Desktop/FInal%20Project%20FIles/fgpreceipt.html" class="btn">Reserve!</button>
+<button type="submit" onclick="formdata()" class="btn">Reserve!</button>
 </form>
 
 <script>
@@ -102,14 +101,14 @@ var numberofguests=document.getElementById("numberofguests").value;
 var date=document.getElementById("date").value;
 var time=document.getElementById("time").value;
 var email=document.getElementById("email").value;
-document.write("<h1>Confirmation Page</h1><br>");
-document.write("Thank you for completing this form.<br><br>");
-document.write("The first name you entered is " + fname + "<br>");
-document.write("The last name you enetered is " + lname + "<br>");
-document.write("The number of guests you entered is " + numberofguests + "<br>");
-document.write("The date you entered is " + date + "<br>");
-document.write("The time you entered is " + time + "<br>");
-document.write("The email you entered is " + email + "<br>");
+document.write("<h1><center>~ Restaurvations ~</center></h1><br>");
+document.write("<h2><center>Thank you for completing this form!</h2><br><br>");
+document.write("<p><strong>The first name you entered is:</strong></p> " + fname + "<br>");
+document.write("<p><strong>The last name you enetered is:</strong></p> " + lname + "<br>");
+document.write("<p><strong>The number of guests you entered is:</strong></p> " + numberofguests + "<br>");
+document.write("<p><strong>The date you entered is:</strong></p> " + date + "<br>");
+document.write("<p><strong>The time you entered is:</strong></p> " + time + "<br>");
+document.write("<p><strong>The email you entered is:</strong></p> " + email + "<br>");
 document.close();
 }
 </script>
