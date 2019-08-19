@@ -4,17 +4,14 @@
   <title>RESTAURVATIONS</title>
 </head>
 <style>
+
 body {
   font-size: 20px;
   font-family: "Times New Roman";
-}
-body {
   background-color: #FFFFF0;
 }
   li {
     display: inline;
-  }
-  li {
     float: left;
     }
   li a{
@@ -294,6 +291,8 @@ body {
 
   </style>
 <body>
+	<!--<p>Window height: <span id="height"></span></p>
+	<p>Window width: <span id="width"></span></p>-->
 
 <div class="header">
   <h1 class="heading"> <center style="letter-spacing:10px;"> ~ RESTAURVATIONS ~ </center> </h1>
@@ -362,10 +361,22 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 <div class='window' title="Window 4" id="window4"></div>
 <div class='window' title="Window 5" id="window5"></div>
 
-
 </body>
 
 <script>
+
+const heightOutput = document.querySelector('#height');
+const widthOutput = document.querySelector('#width');
+
+function reportWindowSize() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+	console.log(heightOutput.textContent);
+	console.log(widthOutput.textContent);
+}
+
+//window.onresize = reportWindowSize;
+
 var tableList = [false, false, false, false, false, false];
 var stoolList = [false, false, false, false, false];
 var boothList = [false, false, false, false, false];
@@ -448,6 +459,24 @@ function stoolClick(stool, num) {
 		stool.style.borderColor = stoolNew;
 	}
 }
+
+/*calculateNewScale(); // if the user go to the page and his window is less than 1920px
+$(window).resize(function ()
+{
+    calculateNewScale();
+});
+
+function calculateNewScale()
+{
+    var percentageOn1 = $(window).width() / 1920) ;
+    $("body").css(
+    {
+        "-moz-transform": "scale("+percentageOn1 +")",
+        "-webkit-transform": "scale("+percentageOn1 +")",
+        "transform": "scale("+percentageOn1 +")"
+    });
+}*/
+
 </script>
 
 </html>
