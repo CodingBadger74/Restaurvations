@@ -111,6 +111,26 @@ body {
 		background-color: black;
 	}
 
+	#Kitchen {
+		left:84%;
+		background-color: white;
+		top: 40%;
+	}
+
+	#Bathroom1 {
+		width: 1%;
+		left:74%;
+		background-color: white;
+		top: 81%;
+	}
+
+	#Bathroom2 {
+		width: 1%;
+		left:89%;
+		background-color: white;
+		top: 81%;
+	}
+
 	#window1 {
 		left: 1.5%;
 	}
@@ -225,7 +245,6 @@ body {
     right:1.55%;
   }
 
-
   #Bar {
     height:5%;
     width:1.9%;
@@ -311,12 +330,16 @@ onmouseout="boothUnhover(this, 3)" onmousedown="boothClick(this, 3)"></div>
 <div class="rectangle" title="Booth 5" id="Booth5" onmouseover="boothHover(this, 4)"
 onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 
+<div class="window" id="Kitchen"> Kitchen </div>
+<div class="window" id="Bathroom1"> Bathroom </div>
+<div class="window" id="Bathroom2"> Bathroom </div>
 
-<div class="vr" title="Kitchen Vline" id="VLine1">&nbsp;</div>
-<div class="rectangle" title="Kitchen Hline" id="HLine1"></div>
-<div class="vr" title="Bathroom Vline" id="VLine2">&nbsp;</div>
-<div class="vr" title="Bathroom Divider" id="VLine3">&nbsp;</div>
-<div class="rectangle" title="Bathroom Hline" id="Hline2"></div>
+
+<div class="vr" id="VLine1"></div>
+<div class="rectangle" id="HLine1"></div>
+<div class="vr" id="VLine2">&nbsp;</div>
+<div class="vr" id="VLine3">&nbsp;</div>
+<div class="rectangle" id="Hline2"></div>
 <div class="rectangle" title="Bar" id="Bar">Bar</div>
 
 <div class="circle2" title="Bar Seat 1" id="BarSeat1" onmouseover="stoolHover(this, 0)"
