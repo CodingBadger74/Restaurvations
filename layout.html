@@ -308,9 +308,35 @@ body {
 
 
 
+  <button id="myBtn" disabled>Done</button>
+
+
+  <script>
+  function myFunction() {
+    document.getElementById("myBtn").disabled = true;
+
+
+    if (tableList[0]==true || tableList[1]==true || tableList[2]==true
+      || tableList[3]==true || tableList[4]==true || tableList[5]==true
+      || boothList[0]==true || boothList[1]==true || boothList[2]==true
+      || boothList[3]==true || boothList[4]==true || stoolList[0]==true
+      || stoolList[1]==true || stoolList[2]==true || stoolList[3]==true) {
+    document.getElementById("myBtn").disabled = false;
+}
+}
+
+
+
+
+  </script>
+
+
+
+
+
 
 <div class="circle" title="Table 1" id="Table1" onmouseover="circleHover(this, 0)"
-onmouseout="circleUnhover(this, 0)" onmousedown="circleClick(this, 0)" ></div>
+onmouseout="circleUnhover(this, 0)" onmousedown="circleClick(this, 0)" onmousedown="myFunction()"></div>
 <div class="circle" title="Table 2" id="Table2" onmouseover="circleHover(this, 1)"
 onmouseout="circleUnhover(this, 1)" onmousedown="circleClick(this, 1)"></div>
 <div class="circle" title="Table 3" id="Table3" onmouseover="circleHover(this, 2)"
@@ -365,6 +391,10 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 <div class='window' title="Window 4" id="window4"></div>
 <div class='window' title="Window 5" id="window5"></div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c44a609ccb04f9fa4be9832e9f7a87da96c6aeb2
 </body>
 
 <script>
@@ -416,6 +446,7 @@ function circleClick(circle, num) {
 		circle.style.backgroundColor = circleNew;
 		circle.style.borderColor = circleNew;
 	}
+  myFunction();
 }
 
 function boothHover(booth, num) {
