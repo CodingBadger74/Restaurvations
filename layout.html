@@ -3,6 +3,7 @@
 <head>
   <title>RESTAURVATIONS</title>
 </head>
+<link rel="stylesheet" href="stylesheet.css">
 <style>
 
 body {
@@ -290,7 +291,7 @@ body {
   }
 
   </style>
-<body>
+<body onresize="resize()">
 	<!--<p>Window height: <span id="height"></span></p>
 	<p>Window width: <span id="width"></span></p>-->
 
@@ -308,7 +309,7 @@ body {
 
 
 
-  <button id="myBtn" disabled>My Button</button>
+  <button id="myBtn" class="biggerFont" disabled>Done</button>
 
 
   <script>
@@ -349,7 +350,7 @@ onmouseout="circleUnhover(this, 4)" onmousedown="circleClick(this, 4)"></div>
 onmouseout="circleUnhover(this, 5)" onmousedown="circleClick(this, 5)"></div>
 
 <div class="rectangle" title="Booth 1" id="Booth1" onmouseover="boothHover(this, 0)"
-onmouseout="boothUnhover(this, 0)" onmousedown="boothClick(this, 0)"></div>
+onmouseout="boothUnhover(this, 0)" onmousedown="boothClick(this, 0)" onmousedown="myFunction"></div>
 <div class="rectangle" title="Booth 2" id="Booth2" onmouseover="boothHover(this, 1)"
 onmouseout="boothUnhover(this, 1)" onmousedown="boothClick(this, 1)"></div>
 <div class="rectangle" title="Booth 3" id="Booth3" onmouseover="boothHover(this, 2)"
@@ -372,7 +373,7 @@ onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 <div class="rectangle" title="Bar" id="Bar">Bar</div>
 
 <div class="circle2" title="Bar Seat 1" id="BarSeat1" onmouseover="stoolHover(this, 0)"
-onmouseout="stoolUnhover(this, 0)" onmousedown="stoolClick(this, 0)"></div>
+onmouseout="stoolUnhover(this, 0)" onmousedown="stoolClick(this, 0)" onmousedown="myFunction"></div>
 <div class="circle2" title="Bar Seat 2" id="BarSeat2" onmouseover="stoolHover(this, 1)"
 onmouseout="stoolUnhover(this, 1)" onmousedown="stoolClick(this, 1)"></div>
 <div class="circle2" title="Bar Seat 3" id="BarSeat3" onmouseover="stoolHover(this, 2)"
@@ -391,7 +392,6 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 <div class='window' title="Window 4" id="window4"></div>
 <div class='window' title="Window 5" id="window5"></div>
 
-
 </body>
 
 <script>
@@ -402,11 +402,13 @@ const widthOutput = document.querySelector('#width');
 function reportWindowSize() {
   heightOutput.textContent = window.innerHeight;
   widthOutput.textContent = window.innerWidth;
-	console.log(heightOutput.textContent);
-	console.log(widthOutput.textContent);
+	console.log(window.innerHeight);
+	console.log(window.innerWidth);
 }
 
-//window.onresize = reportWindowSize;
+function resize() {
+	document.getElementById("Table1").height = 18/100 * window.innerWidth;
+}
 
 var tableList = [false, false, false, false, false, false];
 var stoolList = [false, false, false, false, false];
@@ -466,6 +468,7 @@ function boothClick(booth, num) {
 		booth.style.backgroundColor = boothNew;
 		booth.style.borderColor = boothNew;
 	}
+  myFunction();
 }
 
 function stoolHover(stool, num) {
@@ -490,6 +493,7 @@ function stoolClick(stool, num) {
 		stool.style.backgroundColor = stoolNew;
 		stool.style.borderColor = stoolNew;
 	}
+  myFunction();
 }
 
 /*calculateNewScale(); // if the user go to the page and his window is less than 1920px
@@ -508,6 +512,10 @@ function calculateNewScale()
         "transform": "scale("+percentageOn1 +")"
     });
 }*/
+
+//window.onresize = reportWindowSize();
+
+window.onresize = resize()
 
 </script>
 
