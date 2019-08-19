@@ -349,7 +349,7 @@ onmouseout="circleUnhover(this, 4)" onmousedown="circleClick(this, 4)"></div>
 onmouseout="circleUnhover(this, 5)" onmousedown="circleClick(this, 5)"></div>
 
 <div class="rectangle" title="Booth 1" id="Booth1" onmouseover="boothHover(this, 0)"
-onmouseout="boothUnhover(this, 0)" onmousedown="boothClick(this, 0)"></div>
+onmouseout="boothUnhover(this, 0)" onmousedown="boothClick(this, 0)" onmousedown="myFunction"></div>
 <div class="rectangle" title="Booth 2" id="Booth2" onmouseover="boothHover(this, 1)"
 onmouseout="boothUnhover(this, 1)" onmousedown="boothClick(this, 1)"></div>
 <div class="rectangle" title="Booth 3" id="Booth3" onmouseover="boothHover(this, 2)"
@@ -372,7 +372,7 @@ onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 <div class="rectangle" title="Bar" id="Bar">Bar</div>
 
 <div class="circle2" title="Bar Seat 1" id="BarSeat1" onmouseover="stoolHover(this, 0)"
-onmouseout="stoolUnhover(this, 0)" onmousedown="stoolClick(this, 0)"></div>
+onmouseout="stoolUnhover(this, 0)" onmousedown="stoolClick(this, 0)" onmousedown="myFunction"></div>
 <div class="circle2" title="Bar Seat 2" id="BarSeat2" onmouseover="stoolHover(this, 1)"
 onmouseout="stoolUnhover(this, 1)" onmousedown="stoolClick(this, 1)"></div>
 <div class="circle2" title="Bar Seat 3" id="BarSeat3" onmouseover="stoolHover(this, 2)"
@@ -466,6 +466,7 @@ function boothClick(booth, num) {
 		booth.style.backgroundColor = boothNew;
 		booth.style.borderColor = boothNew;
 	}
+  myFunction();
 }
 
 function stoolHover(stool, num) {
@@ -490,6 +491,7 @@ function stoolClick(stool, num) {
 		stool.style.backgroundColor = stoolNew;
 		stool.style.borderColor = stoolNew;
 	}
+  myFunction();
 }
 
 /*calculateNewScale(); // if the user go to the page and his window is less than 1920px
