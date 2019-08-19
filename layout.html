@@ -74,11 +74,12 @@ body {
   .square {
     height: 70.75%;
     width: 97%;
-    background-color: #E6E6E6;
+    background-color: #FFFFFF;/*#E6E6E6;*/
     position:fixed;
     top:26%;
     left:1.5%;
     z-index: -1;
+		border: 2px solid black;
   }
 
   .heading {
@@ -97,10 +98,58 @@ body {
 
   .vr {
     width:0.45%;
- background-color:#000;
- position:absolute;
+ 		background-color:#000;
+ 		position:absolute;
   }
 
+	.window {
+		position: fixed;
+		width: 11.7%;
+		z-index: 3;
+		height: 1%;
+		top: 96%;
+		background-color: black;
+	}
+
+	#Kitchen {
+		left:84%;
+		background-color: white;
+		top: 40%;
+	}
+
+	#Bathroom1 {
+		width: 1%;
+		left:74%;
+		background-color: white;
+		top: 81%;
+	}
+
+	#Bathroom2 {
+		width: 1%;
+		left:89%;
+		background-color: white;
+		top: 81%;
+	}
+
+	#window1 {
+		left: 1.5%;
+	}
+
+	#window2 {
+		left: 15%;
+	}
+
+	#window3 {
+		left: 28.5%;
+	}
+
+	#window4 {
+		left: 42%;
+	}
+
+	#window5 {
+		left: 55.5%;
+	}
 
   #Table1 {
     top: 27%;
@@ -196,13 +245,14 @@ body {
     right:1.55%;
   }
 
-
   #Bar {
-    height:31.75%;
-    width:8%;
-    background-color: #bb9d44;
+    height:5%;
+    width:1.9%;
+    background-color: #000000;/*#bb9d44;*/
     top: 26%;
     left: 64.9%;
+		padding: 110px 45px;
+		color: #FFFFFF;
   }
 
   #BarSeat1 {
@@ -222,11 +272,13 @@ body {
   }
 
   #Door {
-    height:1.5%;
-    width:5.5%;
+    height:2.5%;
+    width:3%;
     top: 26%;
     left: 12%;
     background-color:#000000;
+		padding: 5px 20px;
+		color: white;
   }
 
   #Front {
@@ -234,9 +286,10 @@ body {
     width: 3%;
     top: 27%;
     left: 5%;
-    background-color:#FFFFFF;
+    background-color: #000000;/*#FFFFFF;*/
 		padding:65px 20px;
 		font-family: blue;
+		color: #FFFFFF;
   }
 
   </style>
@@ -277,13 +330,17 @@ onmouseout="boothUnhover(this, 3)" onmousedown="boothClick(this, 3)"></div>
 <div class="rectangle" title="Booth 5" id="Booth5" onmouseover="boothHover(this, 4)"
 onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 
+<div class="window" id="Kitchen"> Kitchen </div>
+<div class="window" id="Bathroom1"> Bathroom </div>
+<div class="window" id="Bathroom2"> Bathroom </div>
 
-<div class="vr" title="Kitchen Vline" id="VLine1">&nbsp;</div>
-<div class="rectangle" title="Kitchen Hline" id="HLine1"></div>
-<div class="vr" title="Bathroom Vline" id="VLine2">&nbsp;</div>
-<div class="vr" title="Bathroom Divider" id="VLine3">&nbsp;</div>
-<div class="rectangle" title="Bathroom Hline" id="Hline2"></div>
-<div class="rectangle" title="Bar" id="Bar"></div>
+
+<div class="vr" id="VLine1"></div>
+<div class="rectangle" id="HLine1"></div>
+<div class="vr" id="VLine2">&nbsp;</div>
+<div class="vr" id="VLine3">&nbsp;</div>
+<div class="rectangle" id="Hline2"></div>
+<div class="rectangle" title="Bar" id="Bar">Bar</div>
 
 <div class="circle2" title="Bar Seat 1" id="BarSeat1" onmouseover="stoolHover(this, 0)"
 onmouseout="stoolUnhover(this, 0)" onmousedown="stoolClick(this, 0)"></div>
@@ -298,6 +355,14 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 <div class="rectangle" title="Front Desk" id="Front">Front Desk</div>
 
 <div class="square"></div>
+
+<div class='window' title="Window 1" id="window1"></div>
+<div class='window' title="Window 2" id="window2"></div>
+<div class='window' title="Window 3" id="window3"></div>
+<div class='window' title="Window 4" id="window4"></div>
+<div class='window' title="Window 5" id="window5"></div>
+
+
 
 </body>
 
@@ -321,7 +386,7 @@ function circleHover(circle, num) {
 
 function circleUnhover(circle, num) {
 	if (tableList[num] == false) {
-		circle.style.backgroundColor = "#E6E6E6";
+		circle.style.backgroundColor = "white";
 	}
 }
 
@@ -345,7 +410,7 @@ function boothHover(booth, num) {
 
 function boothUnhover(booth, num) {
 	if (boothList[num] == false) {
-		booth.style.backgroundColor = "#E6E6E6";
+		booth.style.backgroundColor = "white";
 	}
 }
 
@@ -369,7 +434,7 @@ function stoolHover(stool, num) {
 
 function stoolUnhover(stool, num) {
 	if (stoolList[num] == false) {
-		stool.style.backgroundColor = "#E6E6E6";
+		stool.style.backgroundColor = "white";
 	}
 }
 
