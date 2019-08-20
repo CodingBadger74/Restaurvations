@@ -452,8 +452,8 @@ function resize(element) {
 	document.getElementById("Table6").style.top = ((w - 100)/100 + 200) + "px";
 
 	document.getElementById("background").style.height = (w*40.5/100) + "px";
-	document.getElementById("background").style.width = (w*97/100) + "px";*/
-}
+	document.getElementById("background").style.width = (w*97/100) + "px";
+}*/
 
 var tableList = [false, false, false, false, false, false];
 var stoolList = [false, false, false, false, false];
@@ -468,14 +468,12 @@ var boothNew = "#bb9d44"; //"#cc0000";
 
 function circleHover(circle, num) {
 	if (tableList[num] == false) {
-		circle.style.backgroundColor = circleOriginal;
-	}
+		circle.style.backgroundColor = circleOriginal;}
 }
 
 function circleUnhover(circle, num) {
 	if (tableList[num] == false) {
-		circle.style.backgroundColor = "white";
-	}
+		circle.style.backgroundColor = "white";}
 }
 
 function circleClick(circle, num) {
