@@ -3,48 +3,83 @@
 <head>
   <title>RESTAURVATIONS</title>
 </head>
-<link rel="stylesheet" href="stylesheet.css">
+
 <style>
 
 body {
   font-size: 20px;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman";}
+
+body {
   background-color: #FFFFF0;
 }
-  li {
-    display: inline;
-    float: left;
-    }
-  li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 8px;
-    text-decoration: none;
-    background-color: #cdb773
-  }
-  li a:hover {
-    background-color: #b4a165
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #cdb773;
-  }
+.navbar {
+overflow: hidden;
+background-color: #cdb773;
+}
+
+.navbar a {
+float: left;
+font-size: 28px;
+color: white;
+text-align: center;
+padding: 8px;
+text-decoration: none;
+}
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+font-size: 28px;
+border: none;
+outline: none;
+color: white;
+padding: 8px 22px;
+background-color: #cdb773;
+font-family: inherit;
+margin:0px;
+left: 14px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+background-color: #b4a165;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 4;
+}
+
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
   .active{
     background-color: #4CAF50;
   }
-  li{
-    border-right: 1px solid #cdb773;
-  }
-  li:last-child {
-    border-right: none;
-  }
+
 
   .circle {
-    height: 18%;
+    /*height: 18%;*/
     width: 10%;
     background-color: #D2B48C;
     background-color: transparent;/*#66ff22;*/
@@ -53,7 +88,7 @@ body {
     position:fixed;
   /*	top:35px;
     left:170px;  */
-    z-index: 2;
+    z-index: 3;
   }
 
   .circle2 {
@@ -66,7 +101,7 @@ body {
 		left: 60%;
   /*	top:35px;
     left:170px;  */
-    z-index: 2;
+    z-index: 3;
   }
 
   .square {
@@ -76,7 +111,7 @@ body {
     position:fixed;
     top:26%;
     left:1.5%;
-    z-index: -1;
+    z-index: 0;
 		border: 2px solid black;
   }
 
@@ -87,7 +122,7 @@ body {
 
   .rectangle {
     position:fixed;
-    z-index: 2;
+    z-index: 1;
 		height: 12%;
     width: 11.3%;
 		background-color: transparent;
@@ -103,7 +138,7 @@ body {
 	.window {
 		position: fixed;
 		width: 11.7%;
-		z-index: 3;
+		z-index: 2;
 		height: 1%;
 		top: 96%;
 		background-color: black;
@@ -129,55 +164,27 @@ body {
 		top: 81%;
 	}
 
-	#window1 {
-		left: 1.5%;
-	}
+	#window1 {left: 1.5%;}
 
-	#window2 {
-		left: 15%;
-	}
+	#window2 {left: 15%;}
 
-	#window3 {
-		left: 28.5%;
-	}
+	#window3 {left: 28.5%;}
 
-	#window4 {
-		left: 42%;
-	}
+	#window4 {left: 42%;}
 
-	#window5 {
-		left: 55.5%;
-	}
+	#window5 {left: 55.5%;}
 
-  #Table1 {
-    top: 27%;
-    left:25%;
-  }
+  #Table1 {top: 27%; left:25%;}
 
-  #Table2 {
-    top: 27%;
-    left: 40%;
-  }
+  #Table2 {top: 27%; left: 40%;}
 
-  #Table3 {
-    top: 55%;
-    left: 3%;
-  }
+  #Table3 {top: 55%; left: 3%;}
 
-  #Table4 {
-    top: 55%;
-    left: 18%;
-  }
+  #Table4 {top: 55%; left: 18%;}
 
-  #Table5 {
-    top: 55%;
-    left:33%
-  }
+  #Table5 {top: 55%; left:33%}
 
-  #Table6 {
-    top: 55%;
-    left: 48%;
-  }
+  #Table6 {top: 55%; left: 48%;}
 
   #Booth1{
 		border: 3px solid #cdb773; /*#ff5050;*/
@@ -253,21 +260,13 @@ body {
 		color: #FFFFFF;
   }
 
-  #BarSeat1 {
-    top: 26.5%;
-  }
+  #BarSeat1 {top: 26.5%;}
 
-  #BarSeat2 {
-    top: 34.5%;
-  }
+  #BarSeat2 {top: 34.5%;}
 
-  #BarSeat3 {
-    top: 42.5%;
-  }
+  #BarSeat3 {top: 42.5%;}
 
-  #BarSeat4 {
-    top: 50.5%;
-  }
+  #BarSeat4 {top: 50.5%;}
 
   #Door {
     height:2.5%;
@@ -296,48 +295,43 @@ body {
 	<p>Window width: <span id="width"></span></p>-->
 
 <div class="header">
-  <h1 class="heading"> <center style="letter-spacing:10px;"> ~ RESTAURVATIONS ~ </center> </h1>
-  <h2 style="color:black; margin-top: -10px;"><center style="font-size:24px;"><i>“There is no sincerer love than the love of food.”</i></center></h2>
+  <h1 class="heading" onselectstart="return false"> <center style="letter-spacing:10px;"> ~ RESTAURVATIONS ~ </center> </h1>
+  <h2 style="color:black; margin-top: -10px;" onselectstart="return false"><center style="font-size:24px;"><i>“There is no sincerer love than the love of food.”</i></center></h2>
 
-  <ul>
-    <li><a href="fgphome.html" style="font-size:28px; position:relative; left:14px;">Home</a></li>
-    <li><a href="fgpmenu.html" div style="position:relative; left:550px; font-size:28px; ">Menu</a></li>
-    <li><a href="layout.html" div style="position:relative; left:960px; font-size:28px;">Make A Restaurvation!</a></li>
-    <li><a></a></li>
-  </ul>
-
-
-
+  <div class="navbar">
+    <div class="dropdown">
+      <button class="dropbtn"> Home
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="fgphome.html">Homepage</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Information</a>
+      </div>
+    </div>
+    <a href="fgpmenu.html" style="font-size:28px; position:relative; left:523px;">Menu</a>
+    <a href="layout.html" style="font-size:28px; position:relative; left:934px;">Make A Reservation!</a>
+  </div>
 
   <a href="fgpreservation.html"><button id="myBtn" class="biggerFont" disabled>Done</button></a>
-
 
   <script>
   function myFunction() {
     document.getElementById("myBtn").disabled = true;
-
 
     if (tableList[0]==true || tableList[1]==true || tableList[2]==true
       || tableList[3]==true || tableList[4]==true || tableList[5]==true
       || boothList[0]==true || boothList[1]==true || boothList[2]==true
       || boothList[3]==true || boothList[4]==true || stoolList[0]==true
       || stoolList[1]==true || stoolList[2]==true || stoolList[3]==true) {
-    document.getElementById("myBtn").disabled = false;
-}
-}
-
-
-
+    	document.getElementById("myBtn").disabled = false;
+		}
+	}
 
   </script>
 
-
-
-
-
-
 <div class="circle" title="Table 1" id="Table1" onmouseover="circleHover(this, 0)"
-onmouseout="circleUnhover(this, 0)" onmousedown="circleClick(this, 0)" onmousedown="myFunction()"></div>
+onmouseout="circleUnhover(this, 0)" onmousedown="circleClick(this, 0)" onresize="resize(this)"></div>
 <div class="circle" title="Table 2" id="Table2" onmouseover="circleHover(this, 1)"
 onmouseout="circleUnhover(this, 1)" onmousedown="circleClick(this, 1)"></div>
 <div class="circle" title="Table 3" id="Table3" onmouseover="circleHover(this, 2)"
@@ -396,18 +390,20 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 
 <script>
 
-const heightOutput = document.querySelector('#height');
-const widthOutput = document.querySelector('#width');
-
-function reportWindowSize() {
-  heightOutput.textContent = window.innerHeight;
-  widthOutput.textContent = window.innerWidth;
-	console.log(window.innerHeight);
-	console.log(window.innerWidth);
-}
-
-function resize() {
-	document.getElementById("Table1").height = 18/100 * window.innerWidth;
+function resize(element) {
+	var screenWidth = window.outerWidth;
+	document.getElementById("Table1").style.height = document.getElementById("Table1").style.width;
+	/*document.getElementById("Table1").style.width = (screenWidth/10) + "px";
+	/*document.getElementById("Table2").style.height = (window.innerWidth/100) + "px";
+	document.getElementById("Table2").style.width = (window.innerWidth/10) + "px";
+	document.getElementById("Table3").style.height = (window.innerWidth/10) + "px";
+	document.getElementById("Table3").style.width = (window.innerWidth/10) + "px";
+	document.getElementById("Table4").style.height = (window.innerWidth/10) + "px";
+	document.getElementById("Table4").style.width = (window.innerWidth/10) + "px";
+	document.getElementById("Table5").style.height = (window.innerWidth/10) + "px";
+	document.getElementById("Table5").style.width = (window.innerWidth/10) + "px";
+	document.getElementById("Table6").style.height = (window.innerWidth/10) + "px";
+	document.getElementById("Table6").style.width = (window.innerWidth/10) + "px";*/
 }
 
 var tableList = [false, false, false, false, false, false];
@@ -495,23 +491,6 @@ function stoolClick(stool, num) {
 	}
   myFunction();
 }
-
-/*calculateNewScale(); // if the user go to the page and his window is less than 1920px
-$(window).resize(function ()
-{
-    calculateNewScale();
-});
-
-function calculateNewScale()
-{
-    var percentageOn1 = $(window).width() / 1920) ;
-    $("body").css(
-    {
-        "-moz-transform": "scale("+percentageOn1 +")",
-        "-webkit-transform": "scale("+percentageOn1 +")",
-        "transform": "scale("+percentageOn1 +")"
-    });
-}*/
 
 //window.onresize = reportWindowSize();
 
