@@ -57,7 +57,7 @@ body{
 </head>
 <body>
 
-<form class="form-style" style="max-width:500px;margin:auto">
+<form id="reservationform" method="get" class="form-style" style="max-width:500px;margin:auto">
   <h2><center><font face="times-new-roman">~ Reservation Form ~</center></h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
@@ -104,18 +104,13 @@ var time=document.getElementById("time").value;
 var email=document.getElementById("email").value;
 document.write("<h1><center>~ Restaurvations ~</center></h1><br>");
 document.write("<h2><center>Thank you for completing this form!</h2><br><br>");
-document.write("<p><strong>The first name you entered is:</strong></p> " + fname + "<br>");
-document.write("<p><strong>The last name you enetered is:</strong></p> " + lname + "<br>");
-document.write("<p><strong>The number of guests you entered is:</strong></p> " + numberofguests + "<br>");
-document.write("<p><strong>The date you entered is:</strong></p> " + date + "<br>");
-document.write("<p><strong>The time you entered is:</strong></p> " + time + "<br>");
-document.write("<p><strong>The email you entered is:</strong></p> " + email + "<br>");
+document.write("<h3><strong>The first name you entered is:</strong></h3> " + fname + "<br>");
+document.write("<h3><strong>The last name you enetered is:</strong></h3> " + lname + "<br>");
+document.write("<h3><strong>The number of guests you entered is:</strong></h3> " + numberofguests + "<br>");
+document.write("<h3><strong>The date you entered is:</strong></h3> " + date + "<br>");
+document.write("<h3><strong>The time you entered is:</strong></h3> " + time + "<br>");
+document.write("<h3><strong>The email you entered is:</strong></h3> " + email + "<br>");
 document.close();
-$(document).ready(function(){
-  $("#btnClk").click(function(){
-    var tempdata=$("#txtbx1").val();
-  }
-})
 }
 </script>
 
