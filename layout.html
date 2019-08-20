@@ -148,6 +148,7 @@ display: block;
 	.biggerFont{
 		position: fixed;
 		z-index: 3;
+		left: 47%;
 	}
 
 	#Kitchen {
@@ -398,8 +399,8 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 
 function resize(element) {
 	var w = window.innerWidth;
-	document.getElementsById("Table1").style.height = (w/10) + "px";
-	document.getElementsById("Table1").style.width = (w/10) + "px";
+	document.getElementById("Table1").style.height = (w/10) + "px";
+	document.getElementById("Table1").style.width = (w/10) + "px";
 	document.getElementById("Table2").style.height = (w/10) + "px";
 	document.getElementById("Table2").style.width = (w/10) + "px";
 	document.getElementById("Table3").style.height = (w/10) + "px";
