@@ -57,7 +57,7 @@ body{
 </head>
 <body>
 
-<form class="form-style" style="max-width:500px;margin:auto">
+<form id="reservationform" method="get" class="form-style" style="max-width:500px;margin:auto">
   <h2><center><font face="times-new-roman">~ Reservation Form ~</center></h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
@@ -111,11 +111,6 @@ document.write("<p><strong>The date you entered is:</strong></p> " + date + "<br
 document.write("<p><strong>The time you entered is:</strong></p> " + time + "<br>");
 document.write("<p><strong>The email you entered is:</strong></p> " + email + "<br>");
 document.close();
-$(document).ready(function(){
-  $("#btnClk").click(function(){
-    var tempdata=$("#txtbx1").val();
-  }
-})
 }
 </script>
 
