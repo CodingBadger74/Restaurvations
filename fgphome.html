@@ -281,6 +281,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+}
 
 <h1><center>Restaurvations aims to serve patrons and businessess simultaneously
   with our reservation service.</center></h1>
@@ -297,7 +298,7 @@ function showSlides(n) {
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
 <span class="fa fa-star"></span>
-<br></br>
+<hr>
 <p><center><strong>Vivian, 21</strong></center></p>
 <p><center>"Very intuitive with the restaurant layouts. I was sure I was able to pick a table that would give me and my date privacy."</center></p>
   <span class="fa fa-star checked"></span>
@@ -305,3 +306,100 @@ function showSlides(n) {
   <span class="fa fa-star checked"></span>
   <span class="fa fa-star checked"></span>
   <span class="fa fa-star checked"></span>
+<hr>
+<p><center><strong>Karen, 80+</strong></center></p>
+<p><center>"The simplicity of the design and interface was very appreciated. I could navigate the site quickly and easily, which is
+  good for me because I can't navigate the interwebs as fast as my grandkids can anymore!"</center></p>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+<hr>
+<h2><center>But of course, we can't leave out the negative reviews. Besides, they help us to improve user experience for the future!</center></h2>
+<p><center><strong>Billy, 20</strong></center></p>
+<p><center>"Long story short, I reserved a table at Panera and when I got there, they told me my seat had already been reserved!
+Why did't the bloody website tell me that the table was already reserved! At the same time no less!"</center></p>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+<hr>
+<p><center><strong>Lillian, 35</strong></center></p>
+<p><center>"I understand that it's only a reservation service, but they need to partner with more restaurants. Not everyone only eats
+  or likes Panera Bread. I need more of a selection."</center></p>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+<hr>
+<p><center><strong>George, 60+</strong></center></p>
+<p><center>"I made a reservation but I after that I forgot about it and ended up missing out on me and my wife's 30th anniversary!"</center></p>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+<hr>
+
+<h2>Speaking of reviews, we'd like to hear from you too! In fact, how about you leave a review write now!</h2>
+
+<fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+
+<style>
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  display: inline-block;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+ float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+</style>
