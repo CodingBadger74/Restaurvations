@@ -79,7 +79,7 @@ display: block;
 
 
   .circle {
-    /*height: 18%;*/
+    height: 18%;
     width: 10%;
     background-color: #D2B48C;
     background-color: transparent;/*#66ff22;*/
@@ -133,6 +133,7 @@ display: block;
     width:0.45%;
  		background-color:#000;
  		position:absolute;
+		z-index: 3
   }
 
 	.window {
@@ -142,6 +143,11 @@ display: block;
 		height: 1%;
 		top: 96%;
 		background-color: black;
+	}
+
+	.biggerFont{
+		position: fixed;
+		z-index: 3;
 	}
 
 	#Kitchen {
@@ -313,7 +319,7 @@ display: block;
     <a href="layout.html" style="font-size:28px; position:relative; left:934px;">Make A Reservation!</a>
   </div>
 
-  <button id="myBtn" class="biggerFont" disabled>Done</button>
+  <a href="fgpreservation.html"><button id="myBtn" class="biggerFont" disabled>Done</button></a>
 
   <script>
   function myFunction() {
@@ -378,7 +384,7 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 <div class="rectangle" title="Door" id="Door">Door</div>
 <div class="rectangle" title="Front Desk" id="Front">Front Desk</div>
 
-<div class="square"></div>
+<div class="square" id="background"></div>
 
 <div class='window' title="Window 1" id="window1"></div>
 <div class='window' title="Window 2" id="window2"></div>
@@ -391,19 +397,22 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 <script>
 
 function resize(element) {
-	var screenWidth = window.outerWidth;
-	document.getElementById("Table1").style.height = document.getElementById("Table1").style.width;
-	/*document.getElementById("Table1").style.width = (screenWidth/10) + "px";
-	/*document.getElementById("Table2").style.height = (window.innerWidth/100) + "px";
-	document.getElementById("Table2").style.width = (window.innerWidth/10) + "px";
-	document.getElementById("Table3").style.height = (window.innerWidth/10) + "px";
-	document.getElementById("Table3").style.width = (window.innerWidth/10) + "px";
-	document.getElementById("Table4").style.height = (window.innerWidth/10) + "px";
-	document.getElementById("Table4").style.width = (window.innerWidth/10) + "px";
-	document.getElementById("Table5").style.height = (window.innerWidth/10) + "px";
-	document.getElementById("Table5").style.width = (window.innerWidth/10) + "px";
-	document.getElementById("Table6").style.height = (window.innerWidth/10) + "px";
-	document.getElementById("Table6").style.width = (window.innerWidth/10) + "px";*/
+	var w = window.innerWidth;
+	document.getElementsById("Table1").style.height = (w/10) + "px";
+	document.getElementsById("Table1").style.width = (w/10) + "px";
+	document.getElementById("Table2").style.height = (w/10) + "px";
+	document.getElementById("Table2").style.width = (w/10) + "px";
+	document.getElementById("Table3").style.height = (w/10) + "px";
+	document.getElementById("Table3").style.width = (w/10) + "px";
+	document.getElementById("Table4").style.height = (w/10) + "px";
+	document.getElementById("Table4").style.width = (w/10) + "px";
+	document.getElementById("Table5").style.height = (w/10) + "px";
+	document.getElementById("Table5").style.width = (w/10) + "px";
+	document.getElementById("Table6").style.height = (w/10) + "px";
+	document.getElementById("Table6").style.width = (w/10) + "px";
+
+	document.getElementById("background").style.height = (w*40.5/100) + "px";
+	document.getElementById("background").style.width = (w*97/100) + "px";
 }
 
 var tableList = [false, false, false, false, false, false];
@@ -494,7 +503,7 @@ function stoolClick(stool, num) {
 
 //window.onresize = reportWindowSize();
 
-window.onresize = resize()
+window.onresize = resize;
 
 </script>
 
