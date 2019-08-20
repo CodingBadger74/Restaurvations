@@ -401,6 +401,7 @@ function resize(element) {
 	var w = window.innerWidth;
 	document.getElementById("Table1").style.height = (w/10) + "px";
 	document.getElementById("Table1").style.width = (w/10) + "px";
+//	document.getElementById("Table1").style.left = (w/4) + "px";
 	document.getElementById("Table2").style.height = (w/10) + "px";
 	document.getElementById("Table2").style.width = (w/10) + "px";
 	document.getElementById("Table3").style.height = (w/10) + "px";
@@ -414,6 +415,44 @@ function resize(element) {
 
 	document.getElementById("background").style.height = (w*40.5/100) + "px";
 	document.getElementById("background").style.width = (w*97/100) + "px";
+}
+
+/* DELETED CODE
+function resize(element) {
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	document.getElementById("Table1").style.height = (w/10) + "px";
+	document.getElementById("Table1").style.width = (w/10) + "px";
+	document.getElementById("Table1").style.left = (w * 25/100) + "px";
+	document.getElementById("Table1").style.top = (h*27/100)+(h*26/100)-w/20 + "px";
+/*
+	document.getElementById("Table2").style.height = (w/10) + "px";
+	document.getElementById("Table2").style.width = (w/10) + "px";
+	document.getElementById("Table2").style.left = (w * 40/100) + "px";
+	document.getElementById("Table2").style.top = ((w - 100)/100 + 210) + "px";
+
+	document.getElementById("Table3").style.height = (w/10) + "px";
+	document.getElementById("Table3").style.width = (w/10) + "px";
+	document.getElementById("Table3").style.left = (w * 3/100) + "px";
+	document.getElementById("Table3").style.top = ((w - 100)/100 + 400) + "px";
+
+	document.getElementById("Table4").style.height = (w/10) + "px";
+	document.getElementById("Table4").style.width = (w/10) + "px";
+	document.getElementById("Table4").style.left = (w/4) + "px";
+	document.getElementById("Table4").style.top = ((w - 100)/100 + 200) + "px";
+
+	document.getElementById("Table5").style.height = (w/10) + "px";
+	document.getElementById("Table5").style.width = (w/10) + "px";
+	document.getElementById("Table5").style.left = (w/4) + "px";
+	document.getElementById("Table5").style.top = ((w - 100)/100 + 200) + "px";
+
+	document.getElementById("Table6").style.height = (w/10) + "px";
+	document.getElementById("Table6").style.width = (w/10) + "px";
+	document.getElementById("Table6").style.left = (w/4) + "px";
+	document.getElementById("Table6").style.top = ((w - 100)/100 + 200) + "px";
+
+	document.getElementById("background").style.height = (w*40.5/100) + "px";
+	document.getElementById("background").style.width = (w*97/100) + "px";*/
 }
 
 var tableList = [false, false, false, false, false, false];
