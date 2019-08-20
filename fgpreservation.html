@@ -52,6 +52,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 body{
   background-color: floralwhite;
 }
+}
 </style>
 </head>
 <body>
@@ -110,6 +111,11 @@ document.write("<p><strong>The date you entered is:</strong></p> " + date + "<br
 document.write("<p><strong>The time you entered is:</strong></p> " + time + "<br>");
 document.write("<p><strong>The email you entered is:</strong></p> " + email + "<br>");
 document.close();
+$(document).ready(function(){
+  $("#btnClk").click(function(){
+    var tempdata=$("#txtbx1").val();
+  }
+})
 }
 </script>
 
