@@ -378,7 +378,7 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 <div class="rectangle" title="Door" id="Door">Door</div>
 <div class="rectangle" title="Front Desk" id="Front">Front Desk</div>
 
-<div class="square"></div>
+<div class="square" id="background"></div>
 
 <div class='window' title="Window 1" id="window1"></div>
 <div class='window' title="Window 2" id="window2"></div>
@@ -392,8 +392,8 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 
 function resize(element) {
 	var w = window.innerWidth;
-	document.getElementById("Table1").style.height = (w/10) + "px";
-	document.getElementById("Table1").style.width = (w/10) + "px";
+	document.getElementsById("Table1").style.height = (w/10) + "px";
+	document.getElementsById("Table1").style.width = (w/10) + "px";
 	document.getElementById("Table2").style.height = (w/10) + "px";
 	document.getElementById("Table2").style.width = (w/10) + "px";
 	document.getElementById("Table3").style.height = (w/10) + "px";
@@ -404,6 +404,9 @@ function resize(element) {
 	document.getElementById("Table5").style.width = (w/10) + "px";
 	document.getElementById("Table6").style.height = (w/10) + "px";
 	document.getElementById("Table6").style.width = (w/10) + "px";
+
+	document.getElementById("background").style.height = (w*40.5/100) + "px";
+	document.getElementById("background").style.width = (w*97/100) + "px";
 }
 
 var tableList = [false, false, false, false, false, false];
