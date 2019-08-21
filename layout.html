@@ -181,6 +181,7 @@ display: block;
 
 	#BarText {
 		background-color: transparent;
+		color: white;
 	}
 
 	#window1 {left: 1.5%;}
@@ -275,7 +276,7 @@ display: block;
     background-color: #000000;/*#bb9d44;*/
     top: 26%;
     left: 64.9%;
-		padding: 110px 45px;
+		/*padding: 110px 45px;*/
 		color: #FFFFFF;
   }
 
@@ -385,7 +386,7 @@ onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 <div class="vr" id="VLine2">&nbsp;</div>
 <div class="vr" id="VLine3">&nbsp;</div>
 <div class="rectangle" id="Hline2"></div>
-<div class="rectangle" title="Bar" id="Bar">Bar</div>
+<div class="rectangle" title="Bar" id="Bar"></div>
 
 <div class="circle2" title="Bar Seat 1" id="BarSeat1" onmouseover="stoolHover(this, 0)"
 onmouseout="stoolUnhover(this, 0)" onmousedown="stoolClick(this, 0)" onmousedown="myFunction"></div>
@@ -496,6 +497,7 @@ function resize(element) {
 
 	document.getElementById("FrontText").style.left = (w * 0.05) + "px";
 	document.getElementById("FrontText").style.top = (h * 0.26 + w * 0.115) + "px";
+	document.getElementById("FrontText").style.width = w + "px";
 
 	document.getElementById("Door").style.height = (w * 0.02) + "px";
 	document.getElementById("Door").style.width = (w * 0.06) + "px";
@@ -504,6 +506,14 @@ function resize(element) {
 
 	document.getElementById("DoorText").style.left = (w * 0.15) + "px";
 	document.getElementById("DoorText").style.top = (h * 0.26 + w * 0.02) + "px";
+
+	document.getElementById("Bar").style.height = (w * 0.19) + "px";
+	document.getElementById("Bar").style.width = (w * 0.08) + "px";
+	document.getElementById("Bar").style.left = (w * 0.649) + "px";
+	document.getElementById("Bar").style.top = (h * 0.26) + "px";
+
+	document.getElementById("BarText").style.left = (w * 0.68) + "px";
+	document.getElementById("BarText").style.top = (h * 0.26 + w * 0.085) + "px";
 
 	document.getElementById("background").style.height = (w * 0.405) + "px";
 	document.getElementById("background").style.width = (w * 0.97) + "px";
