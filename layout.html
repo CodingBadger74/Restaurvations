@@ -153,22 +153,34 @@ display: block;
 
 	#Kitchen {
 		left:84%;
-		background-color: white;
+		background-color: transparent;
 		top: 40%;
 	}
 
 	#Bathroom1 {
 		width: 1%;
 		left:74%;
-		background-color: white;
+		background-color: transparent;
 		top: 81%;
 	}
 
 	#Bathroom2 {
 		width: 1%;
 		left:89%;
-		background-color: white;
+		background-color: transparent;
 		top: 81%;
+	}
+
+	#FrontText {
+		background-color: transparent;
+	}
+
+	#DoorText {
+		background-color: transparent;
+	}
+
+	#BarText {
+		background-color: transparent;
 	}
 
 	#window1 {left: 1.5%;}
@@ -281,7 +293,7 @@ display: block;
     top: 26%;
     left: 12%;
     background-color:#000000;
-		padding: 5px 20px;
+		/*padding: 5px 20px;*/
 		color: white;
   }
 
@@ -384,7 +396,7 @@ onmouseout="stoolUnhover(this, 2)" onmousedown="stoolClick(this, 2)"></div>
 <div class="circle2" title="Bar Seat 4" id="BarSeat4" onmouseover="stoolHover(this, 3)"
 onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 
-<div class="rectangle" title="Door" id="Door">Door</div>
+<div class="rectangle" title="Door" id="Door"></div>
 <div class="rectangle" title="Front Desk" id="Front"></div>
 
 <div class="square" id="background"></div>
@@ -481,6 +493,17 @@ function resize(element) {
 	document.getElementById("Front").style.width = (w * 0.05) + "px";
 	document.getElementById("Front").style.left = (w * 0.05) + "px";
 	document.getElementById("Front").style.top = (h * 0.26 + w * 0.015) + "px";
+
+	document.getElementById("FrontText").style.left = (w * 0.05) + "px";
+	document.getElementById("FrontText").style.top = (h * 0.26 + w * 0.115) + "px";
+
+	document.getElementById("Door").style.height = (w * 0.02) + "px";
+	document.getElementById("Door").style.width = (w * 0.06) + "px";
+	document.getElementById("Door").style.left = (w * 0.15) + "px";
+	document.getElementById("Door").style.top = (h * 0.26) + "px";
+
+	document.getElementById("DoorText").style.left = (w * 0.15) + "px";
+	document.getElementById("DoorText").style.top = (h * 0.26 + w * 0.02) + "px";
 
 	document.getElementById("background").style.height = (w * 0.405) + "px";
 	document.getElementById("background").style.width = (w * 0.97) + "px";
