@@ -291,13 +291,13 @@ display: block;
     top: 27%;
     left: 5%;
     background-color: #000000;/*#FFFFFF;*/
-		padding:65px 20px;
+		/*padding:65px 20px;*/
 		font-family: blue;
 		color: #FFFFFF;
   }
 
   </style>
-<body onresize="resize()">
+<body onload="resize()" onresize="resize()">
 	<!--<p>Window height: <span id="height"></span></p>
 	<p>Window width: <span id="width"></span></p>-->
 
@@ -364,7 +364,9 @@ onmouseout="boothUnhover(this, 4)" onmousedown="boothClick(this, 4)"></div>
 <div class="window" id="Kitchen"> Kitchen </div>
 <div class="window" id="Bathroom1"> Bathroom </div>
 <div class="window" id="Bathroom2"> Bathroom </div>
-
+<div class="window" id="FrontText"> Front Desk </div>
+<div class="window" id="DoorText"> Door </div>
+<div class="window" id="BarText"> Bar </div>
 
 <div class="vr" id="VLine1"></div>
 <div class="rectangle" id="HLine1"></div>
@@ -383,7 +385,7 @@ onmouseout="stoolUnhover(this, 2)" onmousedown="stoolClick(this, 2)"></div>
 onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 
 <div class="rectangle" title="Door" id="Door">Door</div>
-<div class="rectangle" title="Front Desk" id="Front">Front Desk</div>
+<div class="rectangle" title="Front Desk" id="Front"></div>
 
 <div class="square" id="background"></div>
 
@@ -399,61 +401,90 @@ onmouseout="stoolUnhover(this, 3)" onmousedown="stoolClick(this, 3)"></div>
 
 function resize(element) {
 	var w = window.innerWidth;
-	document.getElementById("Table1").style.height = (w/10) + "px";
-	document.getElementById("Table1").style.width = (w/10) + "px";
-//	document.getElementById("Table1").style.left = (w/4) + "px";
-	document.getElementById("Table2").style.height = (w/10) + "px";
-	document.getElementById("Table2").style.width = (w/10) + "px";
-	document.getElementById("Table3").style.height = (w/10) + "px";
-	document.getElementById("Table3").style.width = (w/10) + "px";
-	document.getElementById("Table4").style.height = (w/10) + "px";
-	document.getElementById("Table4").style.width = (w/10) + "px";
-	document.getElementById("Table5").style.height = (w/10) + "px";
-	document.getElementById("Table5").style.width = (w/10) + "px";
-	document.getElementById("Table6").style.height = (w/10) + "px";
-	document.getElementById("Table6").style.width = (w/10) + "px";
-
-	document.getElementById("background").style.height = (w*40.5/100) + "px";
-	document.getElementById("background").style.width = (w*97/100) + "px";
-}
-
-/* DELETED CODE
-function resize(element) {
-	var w = window.innerWidth;
 	var h = window.innerHeight;
-	document.getElementById("Table1").style.height = (w/10) + "px";
-	document.getElementById("Table1").style.width = (w/10) + "px";
-	document.getElementById("Table1").style.left = (w * 25/100) + "px";
-	document.getElementById("Table1").style.top = (h*27/100)+(h*26/100)-w/20 + "px";
-/*
-	document.getElementById("Table2").style.height = (w/10) + "px";
-	document.getElementById("Table2").style.width = (w/10) + "px";
-	document.getElementById("Table2").style.left = (w * 40/100) + "px";
-	document.getElementById("Table2").style.top = ((w - 100)/100 + 210) + "px";
+	document.getElementById("Table1").style.height = (w * 0.1) + "px";
+	document.getElementById("Table1").style.width = (w * 0.1) + "px";
+	document.getElementById("Table1").style.left = (w * 0.25) + "px";
+	document.getElementById("Table1").style.top = (h * 0.26 + w * 0.02) + "px";
 
-	document.getElementById("Table3").style.height = (w/10) + "px";
-	document.getElementById("Table3").style.width = (w/10) + "px";
-	document.getElementById("Table3").style.left = (w * 3/100) + "px";
-	document.getElementById("Table3").style.top = ((w - 100)/100 + 400) + "px";
+	document.getElementById("Table2").style.height = (w * 0.1) + "px";
+	document.getElementById("Table2").style.width = (w * 0.1) + "px";
+	document.getElementById("Table2").style.left = (w * 0.4) + "px";
+	document.getElementById("Table2").style.top = (h * 0.26 + w * 0.02) + "px";
 
-	document.getElementById("Table4").style.height = (w/10) + "px";
-	document.getElementById("Table4").style.width = (w/10) + "px";
-	document.getElementById("Table4").style.left = (w/4) + "px";
-	document.getElementById("Table4").style.top = ((w - 100)/100 + 200) + "px";
+	document.getElementById("Table3").style.height = (w * 0.1) + "px";
+	document.getElementById("Table3").style.width = (w * 0.1) + "px";
+	document.getElementById("Table3").style.left = (w * 0.03) + "px";
+	document.getElementById("Table3").style.top = (h * 0.26 + w * 0.16) + "px";
 
-	document.getElementById("Table5").style.height = (w/10) + "px";
-	document.getElementById("Table5").style.width = (w/10) + "px";
-	document.getElementById("Table5").style.left = (w/4) + "px";
-	document.getElementById("Table5").style.top = ((w - 100)/100 + 200) + "px";
+	document.getElementById("Table4").style.height = (w * 0.1) + "px";
+	document.getElementById("Table4").style.width = (w * 0.1) + "px";
+	document.getElementById("Table4").style.left = (w * 0.18) + "px";
+	document.getElementById("Table4").style.top = (h * 0.26 + w * 0.16) + "px";
 
-	document.getElementById("Table6").style.height = (w/10) + "px";
-	document.getElementById("Table6").style.width = (w/10) + "px";
-	document.getElementById("Table6").style.left = (w/4) + "px";
-	document.getElementById("Table6").style.top = ((w - 100)/100 + 200) + "px";
+	document.getElementById("Table5").style.height = (w * 0.1) + "px";
+	document.getElementById("Table5").style.width = (w * 0.1) + "px";
+	document.getElementById("Table5").style.left = (w * 0.33) + "px";
+	document.getElementById("Table5").style.top = (h * 0.26 + w * 0.16) + "px";
 
-	document.getElementById("background").style.height = (w*40.5/100) + "px";
-	document.getElementById("background").style.width = (w*97/100) + "px";
-}*/
+	document.getElementById("Table6").style.height = (w * 0.1) + "px";
+	document.getElementById("Table6").style.width = (w * 0.1) + "px";
+	document.getElementById("Table6").style.left = (w * 0.48) + "px";
+	document.getElementById("Table6").style.top = (h * 0.26 + w * 0.16) + "px";
+
+	document.getElementById("Booth1").style.height = (w * 0.085) + "px";
+	document.getElementById("Booth1").style.width = (w * 0.113) + "px";
+	document.getElementById("Booth1").style.left = (w * 0.015) + "px";
+	document.getElementById("Booth1").style.top = (h * 0.26 + w * 0.315) + "px";
+
+	document.getElementById("Booth2").style.height = (w * 0.085) + "px";
+	document.getElementById("Booth2").style.width = (w * 0.113) + "px";
+	document.getElementById("Booth2").style.left = (w * 0.15) + "px";
+	document.getElementById("Booth2").style.top = (h * 0.26 + w * 0.315) + "px";
+
+	document.getElementById("Booth3").style.height = (w * 0.085) + "px";
+	document.getElementById("Booth3").style.width = (w * 0.113) + "px";
+	document.getElementById("Booth3").style.left = (w * 0.285) + "px";
+	document.getElementById("Booth3").style.top = (h * 0.26 + w * 0.315) + "px";
+
+	document.getElementById("Booth4").style.height = (w * 0.085) + "px";
+	document.getElementById("Booth4").style.width = (w * 0.113) + "px";
+	document.getElementById("Booth4").style.left = (w * 0.42) + "px";
+	document.getElementById("Booth4").style.top = (h * 0.26 + w * 0.315) + "px";
+
+	document.getElementById("Booth5").style.height = (w * 0.085) + "px";
+	document.getElementById("Booth5").style.width = (w * 0.113) + "px";
+	document.getElementById("Booth5").style.left = (w * 0.555) + "px";
+	document.getElementById("Booth5").style.top = (h * 0.26 + w * 0.315) + "px";
+
+	document.getElementById("BarSeat1").style.height = (w * 0.035) + "px";
+	document.getElementById("BarSeat1").style.width = (w * 0.035) + "px";
+	document.getElementById("BarSeat1").style.left = (w * 0.6) + "px";
+	document.getElementById("BarSeat1").style.top = (h * 0.26 + w * 0.005) + "px";
+
+	document.getElementById("BarSeat2").style.height = (w * 0.035) + "px";
+	document.getElementById("BarSeat2").style.width = (w * 0.035) + "px";
+	document.getElementById("BarSeat2").style.left = (w * 0.6) + "px";
+	document.getElementById("BarSeat2").style.top = (h * 0.26 + w * 0.05) + "px";
+
+	document.getElementById("BarSeat3").style.height = (w * 0.035) + "px";
+	document.getElementById("BarSeat3").style.width = (w * 0.035) + "px";
+	document.getElementById("BarSeat3").style.left = (w * 0.6) + "px";
+	document.getElementById("BarSeat3").style.top = (h * 0.26 + w * 0.095) + "px";
+
+	document.getElementById("BarSeat4").style.height = (w * 0.035) + "px";
+	document.getElementById("BarSeat4").style.width = (w * 0.035) + "px";
+	document.getElementById("BarSeat4").style.left = (w * 0.6) + "px";
+	document.getElementById("BarSeat4").style.top = (h * 0.26 + w * 0.14) + "px";
+
+	document.getElementById("Front").style.height = (w * 0.1) + "px";
+	document.getElementById("Front").style.width = (w * 0.05) + "px";
+	document.getElementById("Front").style.left = (w * 0.05) + "px";
+	document.getElementById("Front").style.top = (h * 0.26 + w * 0.015) + "px";
+
+	document.getElementById("background").style.height = (w * 0.405) + "px";
+	document.getElementById("background").style.width = (w * 0.97) + "px";
+}
 
 var tableList = [false, false, false, false, false, false];
 var stoolList = [false, false, false, false, false];
