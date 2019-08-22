@@ -124,6 +124,11 @@ display: block;
     opacity: 0.9;
   }
 
+  .clocklet-options-1 {
+    font-family: Changa, sans serif;
+    border-radius: 50%;
+  }
+
   .btn:hover {
     opacity: 1;
   }
@@ -169,7 +174,7 @@ display: block;
 
   <div class="input-container">
     <i class="fa fa-sort-numeric-asc icon"></i>
-    <input class="input-field" type="text" id="numberofguests" placeholder="# of Guests Attending" name="#">
+    <input class="input-field" type="number" min="1" max="10" id="numberofguests" placeholder="# of Guests Attending" name="#">
   </div>
 
   <div class="input-container">
@@ -179,12 +184,12 @@ display: block;
 
   <div class="input-container">
     <i class="fa fa-clock-o icon"></i>
-    <input class="input-field" type="time" id="time" placeholder="10:30 AM" name="time">
+    <input data-clocklet="class-name: clocklet-options-1; format: h:mm AA; alignment: center; placement: top;" id="time" placeholder="Time of Arrival" name="time">
     </div>
 
     <div class="input-container">
       <i class="fa fa-address-card-o icon"></i>
-      <input class="input-field" type="text" id="email" placeholder="Email" name="email">
+      <input class="input-field" type="email" id="email" placeholder="Email" name="email">
     </div>
 <button type="submit" onclick="formdata()" class="btn">Reserve!</button>
 </form>
